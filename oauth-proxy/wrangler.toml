@@ -1,0 +1,11 @@
+name = "cetatea-decap-oauth"
+main = "worker.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+# Client ID-ul aplicației OAuth de pe GitHub (nu este secret).
+# Completează după crearea aplicației OAuth (vezi pasul 1 din instrucțiuni).
+GITHUB_CLIENT_ID = "Ov23li5t6Hnrrsi21I4y"
+
+# GITHUB_CLIENT_SECRET se setează separat, ca secret (nu aici!):
+#   npx wrangler secret put GITHUB_CLIENT_SECRET

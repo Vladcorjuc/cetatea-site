@@ -6,7 +6,7 @@ backend:
   name: github
   repo: Vladcorjuc/cetatea-site
   branch: main
-  base_url: https://COMPLETEAZA-PROXY-OAUTH.example.com
+  base_url: https://cetatea-decap-oauth.cetatea-decap-oauth.workers.dev
 
 # Pentru testare locală: rulează `npx decap-server` și decomentează linia de mai jos.
 # local_backend: true
