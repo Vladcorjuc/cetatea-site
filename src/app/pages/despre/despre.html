@@ -1,0 +1,57 @@
+@if (pagina(); as p) {
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--inverse">Despre noi</span>
+      <h1>{{ p.titlu }}</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container despre-grid">
+      <div>
+        <h2>{{ p.cineSuntemTitlu }}</h2>
+        <p>{{ p.cineSuntemText }}</p>
+      </div>
+      <div class="despre-grid__aside">
+        <div class="despre-card">
+          <h3>{{ p.scopTitlu }}</h3>
+          <p>{{ p.scopText }}</p>
+        </div>
+        <div class="despre-card">
+          <h3>{{ p.viziuneTitlu }}</h3>
+          <p>{{ p.viziuneText }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">{{ p.obiectiveTitlu }}</span>
+        <h2>Cum trăim credința împreună</h2>
+      </div>
+      <ol class="obiective-list">
+        @for (obiectiv of p.obiective; track obiectiv.text; let i = $index) {
+          <li>
+            <span class="obiective-list__numar">{{ i + 1 }}</span>
+            <span>{{ obiectiv.text }}</span>
+          </li>
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">{{ p.ceCredemTitlu }}</span>
+        <h2>Mărturisirea noastră de credință</h2>
+        <p class="verset">
+          „{{ p.ceCredemVerset }}” <span>— {{ p.ceCredemVersetReferinta }}</span>
+        </p>
+      </div>
+      <app-ce-credem [articole]="p.ceCredem" />
+    </div>
+  </section>
+}

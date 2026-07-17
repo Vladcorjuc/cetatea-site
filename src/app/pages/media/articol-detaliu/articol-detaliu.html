@@ -1,0 +1,19 @@
+@if (articol(); as a) {
+  <article class="articol">
+    <header class="page-hero">
+      <div class="container">
+        <a routerLink="/media" class="articol__inapoi">← Înapoi la Media</a>
+        <time>{{ formateazaData(a.data) }}</time>
+        <h1>{{ a.titlu }}</h1>
+      </div>
+    </header>
+
+    @if (a.coperta) {
+      <div class="container">
+        <img [src]="a.coperta" [alt]="a.titlu" class="articol__coperta" />
+      </div>
+    }
+
+    <div class="container articol__continut" [innerHTML]="a.continut | markdown"></div>
+  </article>
+}

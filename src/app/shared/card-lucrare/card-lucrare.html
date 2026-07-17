@@ -1,0 +1,8 @@
+<article class="card-lucrare">
+  <h3>{{ card().titlu }}</h3>
+  <p>{{ card().text }}</p>
+  <a [routerLink]="card().linkRuta" class="card-lucrare__link">
+    {{ card().linkText }}
+    <span aria-hidden="true">→</span>
+  </a>
+</article>

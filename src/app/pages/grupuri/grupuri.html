@@ -1,0 +1,27 @@
+@if (pagina(); as p) {
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--inverse">Comunitate</span>
+      <h1>{{ p.titlu }}</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <p class="grupuri-intro">{{ p.introText }}</p>
+
+      <div class="grupuri-grid">
+        @for (grup of p.grupuri; track grup.titlu) {
+          <article class="grup-card">
+            <div class="grup-card__imagine" [style.background-image]="'url(' + grup.imagine + ')'"></div>
+            <div class="grup-card__body">
+              <h3>{{ grup.titlu }}</h3>
+              <p>{{ grup.descriere }}</p>
+              <span class="grup-card__program">{{ grup.program }}</span>
+            </div>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+}

@@ -1,0 +1,24 @@
+{
+  "titlu": "Grupuri",
+  "introText": "Grupurile mici sunt locul unde credința devine cotidiană — ne rugăm unii pentru alții, studiem Scriptura împreună și ne susținem la bine și la greu. Alătură-te unui grup aproape de tine.",
+  "grupuri": [
+    {
+      "titlu": "Grup de tineret",
+      "descriere": "Pentru liceeni și tineri — timp de închinare, discuții deschise și prietenii autentice.",
+      "program": "Vineri, 19:00",
+      "imagine": "assets/images/grup-tineret.jpg"
+    },
+    {
+      "titlu": "Grup de familii",
+      "descriere": "Cupluri și familii care cresc împreună în credință și se sprijină reciproc.",
+      "program": "Joi, 19:00",
+      "imagine": "assets/images/grup-familii.jpg"
+    },
+    {
+      "titlu": "Grup de rugăciune",
+      "descriere": "Un timp dedicat rugăciunii pentru biserică, comunitate și nevoile fiecăruia.",
+      "program": "Miercuri, 19:00",
+      "imagine": "assets/images/grup-rugaciune.jpg"
+    }
+  ]
+}

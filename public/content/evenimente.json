@@ -1,0 +1,22 @@
+{
+  "evenimente": [
+    {
+      "titlu": "Slujba de duminică",
+      "data": "2026-07-19",
+      "interval": "10:00 - 12:00",
+      "locatie": "Lisaura, Suceava"
+    },
+    {
+      "titlu": "Întâlnire de rugăciune",
+      "data": "2026-07-22",
+      "interval": "19:00 - 20:00",
+      "locatie": "Lisaura, Suceava"
+    },
+    {
+      "titlu": "Slujba de duminică",
+      "data": "2026-07-26",
+      "interval": "10:00 - 12:00",
+      "locatie": "Lisaura, Suceava"
+    }
+  ]
+}

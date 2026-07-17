@@ -1,0 +1,71 @@
+@if (pagina(); as p) {
+  <section class="hero">
+    <div class="hero__bg" [style.background-image]="'url(' + p.heroImagine + ')'"></div>
+    <div class="hero__scrim"></div>
+    <div class="container hero__content">
+      <span class="eyebrow eyebrow--inverse">{{ p.heroEyebrow }}</span>
+      <h1>
+        {{ p.heroTitluLinia1 }}<br />
+        {{ p.heroTitluLinia2 }}
+      </h1>
+      <p class="hero__subtitle">{{ p.heroSubtitlu }}</p>
+      <div class="hero__actions">
+        <a [routerLink]="p.heroButonRuta" class="btn btn-primary">
+          {{ p.heroButonText }}
+        </a>
+        @if (site(); as s) {
+          <div class="hero__program">
+            @for (item of s.programDuminica; track item.titlu) {
+              <div>
+                <strong>{{ item.titlu }}</strong>
+                <span>{{ item.interval }}</span>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container mission">
+      <div class="section-head section-head--center">
+        <span class="eyebrow">Cine suntem</span>
+        <h2>{{ p.misiuneTitlu }}</h2>
+      </div>
+      <p class="mission__text">{{ p.misiuneText }}</p>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="carduri-grid">
+        @for (card of p.carduri; track card.titlu) {
+          <app-card-lucrare [card]="card" />
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Calendar</span>
+        <h2>{{ p.evenimenteTitlu }}</h2>
+      </div>
+      <ul class="evenimente-list">
+        @for (eveniment of evenimente(); track eveniment.titlu + eveniment.data) {
+          <li>
+            <div class="evenimente-list__data">{{ formateazaData(eveniment.data) }}</div>
+            <div class="evenimente-list__info">
+              <strong>{{ eveniment.titlu }}</strong>
+              <span>{{ eveniment.interval }} · {{ eveniment.locatie }}</span>
+            </div>
+          </li>
+        } @empty {
+          <li class="evenimente-list__gol">Nu sunt evenimente programate momentan.</li>
+        }
+      </ul>
+    </div>
+  </section>
+}

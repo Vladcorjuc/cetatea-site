@@ -1,0 +1,27 @@
+<div class="ce-credem">
+  <div class="ce-credem__tabs" role="tablist" aria-label="Ce credem">
+    @for (articol of articole(); track articol.titlu; let i = $index) {
+      <button
+        type="button"
+        role="tab"
+        class="ce-credem__tab"
+        [class.is-active]="indexActiv() === i"
+        [attr.aria-selected]="indexActiv() === i"
+        [id]="'tab-' + i"
+        [attr.aria-controls]="'panel-' + i"
+        (click)="selecteaza(i)"
+      >
+        {{ articol.titlu }}
+      </button>
+    }
+  </div>
+
+  @for (articol of articole(); track articol.titlu; let i = $index) {
+    @if (indexActiv() === i) {
+      <div class="ce-credem__panel" role="tabpanel" [id]="'panel-' + i" [attr.aria-labelledby]="'tab-' + i">
+        <h3>{{ articol.titlu }}</h3>
+        <p>{{ articol.text }}</p>
+      </div>
+    }
+  }
+</div>

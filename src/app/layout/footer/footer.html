@@ -1,0 +1,48 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="assets/logo/lockup-vertical-cream.svg" alt="Biserica Cetatea" class="footer__logo" />
+      @if (site(); as s) {
+        <p class="footer__motto">{{ s.motto }}</p>
+      }
+    </div>
+
+    @if (site(); as s) {
+      <div class="footer__col">
+        <h3>Contact</h3>
+        <ul>
+          <li>{{ s.adresa }}, {{ s.oras }}</li>
+          <li><a [href]="'mailto:' + s.email">{{ s.email }}</a></li>
+          <li><a [href]="'tel:' + s.telefon">{{ s.telefon }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Program</h3>
+        <ul>
+          @for (p of s.programDuminica; track p.titlu) {
+            <li>{{ p.titlu }} — {{ p.interval }}</li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h3>Urmărește-ne</h3>
+        <div class="footer__social">
+          @for (retea of s.retele; track retea.nume) {
+            <a [href]="retea.link" target="_blank" rel="noopener" [attr.aria-label]="retea.nume">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path [attr.d]="iconaPentru(retea.nume)" />
+              </svg>
+            </a>
+          }
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© {{ anAcesta }} {{ site()?.denumireCompleta ?? 'Biserica Cetatea' }}</span>
+    <a routerLink="/contact">Contact</a>
+  </div>
+</footer>

@@ -1,0 +1,145 @@
+.hero {
+  position: relative;
+  min-height: 88vh;
+  display: flex;
+  align-items: flex-end;
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-ink);
+}
+
+.hero__scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(46, 42, 36, 0.35) 0%,
+    rgba(46, 42, 36, 0.55) 55%,
+    rgba(46, 42, 36, 0.85) 100%
+  );
+}
+
+.hero__content {
+  position: relative;
+  padding-bottom: var(--space-5);
+  max-width: 760px;
+}
+
+.eyebrow--inverse {
+  color: var(--color-terracotta-light);
+}
+
+.hero h1 {
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+
+.hero__subtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 56ch;
+  margin-bottom: var(--space-3);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.hero__program {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  strong {
+    font-size: 0.85rem;
+    color: var(--color-white);
+  }
+
+  span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+.mission {
+  text-align: center;
+}
+
+.mission__text {
+  max-width: 68ch;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.carduri-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+}
+
+.evenimente-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--color-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    background: var(--color-white);
+    padding: var(--space-3);
+  }
+}
+
+.evenimente-list__data {
+  font-weight: 700;
+  color: var(--color-accent);
+  min-width: 160px;
+}
+
+.evenimente-list__info {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+}
+
+.evenimente-list__gol {
+  color: var(--color-text-muted);
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .hero {
+    min-height: 78vh;
+  }
+
+  .evenimente-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-1);
+  }
+}

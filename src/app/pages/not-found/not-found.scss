@@ -1,0 +1,9 @@
+.not-found {
+  text-align: center;
+  padding: var(--space-6) 0;
+
+  p {
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+  }
+}

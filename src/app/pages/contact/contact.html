@@ -1,0 +1,49 @@
+@if (pagina(); as p) {
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--inverse">Vino la Cetatea</span>
+      <h1>{{ p.titlu }}</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div>
+        <p class="contact-intro">{{ p.introText }}</p>
+
+        @if (site(); as s) {
+          <ul class="contact-list">
+            <li>
+              <strong>Adresă</strong>
+              <span>{{ s.adresa }}, {{ s.oras }}</span>
+            </li>
+            <li>
+              <strong>Email</strong>
+              <a [href]="'mailto:' + s.email">{{ s.email }}</a>
+            </li>
+            <li>
+              <strong>Telefon</strong>
+              <a [href]="'tel:' + s.telefon">{{ s.telefon }}</a>
+            </li>
+            <li>
+              <strong>Program</strong>
+              <span>
+                @for (item of s.programDuminica; track item.titlu; let ultim = $last) {
+                  {{ item.titlu }}: {{ item.interval }}{{ ultim ? '' : ' · ' }}
+                }
+              </span>
+            </li>
+          </ul>
+        }
+      </div>
+
+      <div class="contact-harta">
+        <iframe
+          title="Harta — Lisaura, Suceava"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=26.29%2C47.65%2C26.35%2C47.69&layer=mapnik&marker=47.67%2C26.32"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+}

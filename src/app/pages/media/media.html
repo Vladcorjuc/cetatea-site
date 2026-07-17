@@ -1,0 +1,89 @@
+<section class="page-hero">
+  <div class="container">
+    <span class="eyebrow eyebrow--inverse">Resurse</span>
+    <h1>Media</h1>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="media-tabs" role="tablist" aria-label="Tipuri de resurse">
+      @for (s of sectiuni; track s.id) {
+        <button
+          type="button"
+          role="tab"
+          class="media-tabs__tab"
+          [class.is-active]="sectiune() === s.id"
+          [attr.aria-selected]="sectiune() === s.id"
+          (click)="selecteaza(s.id)"
+        >
+          {{ s.text }}
+        </button>
+      }
+    </div>
+
+    @switch (sectiune()) {
+      @case ('predici') {
+        <div class="media-grid">
+          @for (predica of predici(); track predica.titlu + predica.data) {
+            <a [href]="predica.link" target="_blank" rel="noopener" class="media-card">
+              <div
+                class="media-card__thumb"
+                [style.background-image]="predica.thumbnail ? 'url(' + predica.thumbnail + ')' : ''"
+              >
+                <span class="media-card__play" aria-hidden="true">▶</span>
+              </div>
+              <div class="media-card__body">
+                <time>{{ formateazaData(predica.data) }}</time>
+                <h3>{{ predica.titlu }}</h3>
+                <p>{{ predica.descriere }}</p>
+              </div>
+            </a>
+          } @empty {
+            <p class="media-gol">Nu sunt predici disponibile momentan.</p>
+          }
+        </div>
+      }
+      @case ('podcast') {
+        <div class="media-grid">
+          @for (episod of podcast(); track episod.titlu + episod.data) {
+            <a [href]="episod.link" target="_blank" rel="noopener" class="media-card">
+              <div
+                class="media-card__thumb"
+                [style.background-image]="episod.thumbnail ? 'url(' + episod.thumbnail + ')' : ''"
+              >
+                <span class="media-card__play" aria-hidden="true">🎙</span>
+              </div>
+              <div class="media-card__body">
+                <time>{{ formateazaData(episod.data) }}</time>
+                <h3>{{ episod.titlu }}</h3>
+                <p>{{ episod.descriere }}</p>
+              </div>
+            </a>
+          } @empty {
+            <p class="media-gol">Nu sunt episoade disponibile momentan.</p>
+          }
+        </div>
+      }
+      @case ('articole') {
+        <div class="media-grid">
+          @for (articol of articole(); track articol.slug) {
+            <a [routerLink]="['/media/articole', articol.slug]" class="media-card">
+              <div
+                class="media-card__thumb"
+                [style.background-image]="articol.coperta ? 'url(' + articol.coperta + ')' : ''"
+              ></div>
+              <div class="media-card__body">
+                <time>{{ formateazaData(articol.data) }}</time>
+                <h3>{{ articol.titlu }}</h3>
+                <p>{{ articol.rezumat }}</p>
+              </div>
+            </a>
+          } @empty {
+            <p class="media-gol">Nu sunt articole publicate momentan.</p>
+          }
+        </div>
+      }
+    }
+  </div>
+</section>

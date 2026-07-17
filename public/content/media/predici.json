@@ -1,0 +1,18 @@
+{
+  "predici": [
+    {
+      "titlu": "Cetatea nezdruncinată",
+      "data": "2026-07-05",
+      "link": "https://youtube.com",
+      "descriere": "Un mesaj despre încrederea în Dumnezeu în vremuri de schimbare.",
+      "thumbnail": "assets/images/predica-1.jpg"
+    },
+    {
+      "titlu": "Familia, prima biserică",
+      "data": "2026-06-28",
+      "link": "https://youtube.com",
+      "descriere": "Despre rolul familiei în formarea credinței.",
+      "thumbnail": "assets/images/predica-2.jpg"
+    }
+  ]
+}

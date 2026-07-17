@@ -1,0 +1,34 @@
+.card-lucrare {
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    color: var(--color-accent);
+  }
+
+  p {
+    color: var(--color-text-muted);
+    flex: 1;
+  }
+}
+
+.card-lucrare__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  color: var(--color-text);
+
+  span {
+    transition: transform 0.15s ease;
+  }
+
+  &:hover span {
+    transform: translateX(3px);
+  }
+}

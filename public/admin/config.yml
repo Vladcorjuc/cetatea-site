@@ -1,0 +1,184 @@
+# Configurația Decap CMS — panoul de administrare a conținutului.
+#
+# ÎNAINTE DE PUBLICARE: înlocuiește `NUME_UTILIZATOR/cetatea-site` cu repo-ul
+# real de GitHub și `base_url` cu adresa proxy-ului OAuth (vezi SETUP.md).
+backend:
+  name: github
+  repo: NUME_UTILIZATOR/cetatea-site
+  branch: main
+  base_url: https://COMPLETEAZA-PROXY-OAUTH.example.com
+
+# Pentru testare locală: rulează `npx decap-server` și decomentează linia de mai jos.
+# local_backend: true
+
+locale: ro
+site_url: /
+display_url: /
+logo_url: assets/logo/lockup-vertical-cream.svg
+
+media_folder: public/assets/uploads
+public_folder: assets/uploads
+
+collections:
+  - name: setari
+    label: 'Setări generale'
+    files:
+      - name: site
+        label: 'Date de contact și program'
+        file: public/content/site.json
+        fields:
+          - { name: numeBiserica, label: 'Numele scurt al bisericii', widget: string }
+          - { name: denumireCompleta, label: 'Denumirea completă', widget: string }
+          - { name: motto, label: 'Motto / verset', widget: string }
+          - { name: adresa, label: 'Adresă', widget: string }
+          - { name: oras, label: 'Oraș', widget: string }
+          - { name: email, label: 'Email', widget: string }
+          - { name: telefon, label: 'Telefon', widget: string }
+          - name: programDuminica
+            label: 'Program întâlniri'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: interval, label: 'Interval orar', widget: string }
+          - name: retele
+            label: 'Rețele sociale'
+            widget: list
+            fields:
+              - name: nume
+                label: 'Rețea'
+                widget: select
+                options: [Facebook, Instagram, Youtube, TikTok, Spotify]
+              - { name: link, label: 'Link', widget: string }
+
+  - name: pagini
+    label: 'Pagini'
+    files:
+      - name: acasa
+        label: 'Pagina Acasă'
+        file: public/content/pagini/acasa.json
+        fields:
+          - { name: heroEyebrow, label: 'Text mic deasupra titlului', widget: string }
+          - { name: heroTitluLinia1, label: 'Titlu — primul rând', widget: string }
+          - { name: heroTitluLinia2, label: 'Titlu — al doilea rând', widget: string }
+          - { name: heroSubtitlu, label: 'Subtitlu', widget: text }
+          - { name: heroButonText, label: 'Textul butonului', widget: string }
+          - { name: heroButonRuta, label: 'Ruta butonului (ex: /contact)', widget: string }
+          - { name: heroImagine, label: 'Imaginea de fundal', widget: image, required: false }
+          - { name: misiuneTitlu, label: 'Titlul secțiunii de misiune', widget: string }
+          - { name: misiuneText, label: 'Textul misiunii', widget: text }
+          - name: carduri
+            label: 'Carduri de lucrare'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: text, label: 'Text', widget: text }
+              - { name: linkText, label: 'Textul linkului', widget: string }
+              - { name: linkRuta, label: 'Ruta linkului (ex: /grupuri)', widget: string }
+          - { name: evenimenteTitlu, label: 'Titlul secțiunii de evenimente', widget: string }
+
+      - name: despre
+        label: 'Pagina Despre noi'
+        file: public/content/pagini/despre.json
+        fields:
+          - { name: titlu, label: 'Titlul paginii', widget: string }
+          - { name: cineSuntemTitlu, label: 'Titlu „Cine suntem”', widget: string }
+          - { name: cineSuntemText, label: 'Text „Cine suntem”', widget: text }
+          - { name: scopTitlu, label: 'Titlu „Scop”', widget: string }
+          - { name: scopText, label: 'Text „Scop”', widget: text }
+          - { name: viziuneTitlu, label: 'Titlu „Viziune”', widget: string }
+          - { name: viziuneText, label: 'Text „Viziune”', widget: text }
+          - { name: obiectiveTitlu, label: 'Titlu „Obiective”', widget: string }
+          - name: obiective
+            label: 'Obiective și valori'
+            widget: list
+            fields:
+              - { name: text, label: 'Text', widget: string }
+          - { name: ceCredemTitlu, label: 'Titlu „Ce credem”', widget: string }
+          - { name: ceCredemVerset, label: 'Verset', widget: string }
+          - { name: ceCredemVersetReferinta, label: 'Referința versetului', widget: string }
+          - name: ceCredem
+            label: 'Articole de credință (taburi)'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: text, label: 'Text', widget: text }
+
+      - name: grupuri
+        label: 'Pagina Grupuri'
+        file: public/content/pagini/grupuri.json
+        fields:
+          - { name: titlu, label: 'Titlul paginii', widget: string }
+          - { name: introText, label: 'Text introductiv', widget: text }
+          - name: grupuri
+            label: 'Grupuri'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: descriere, label: 'Descriere', widget: text }
+              - { name: program, label: 'Program (ex: Vineri, 19:00)', widget: string }
+              - { name: imagine, label: 'Imagine', widget: image, required: false }
+
+      - name: contact
+        label: 'Pagina Contact'
+        file: public/content/pagini/contact.json
+        fields:
+          - { name: titlu, label: 'Titlul paginii', widget: string }
+          - { name: introText, label: 'Text introductiv', widget: text }
+
+  - name: media
+    label: 'Media'
+    files:
+      - name: predici
+        label: 'Predici'
+        file: public/content/media/predici.json
+        fields:
+          - name: predici
+            label: 'Lista de predici'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: data, label: 'Data (AAAA-LL-ZZ)', widget: string }
+              - { name: link, label: 'Link (YouTube etc.)', widget: string }
+              - { name: descriere, label: 'Descriere', widget: text }
+              - { name: thumbnail, label: 'Imagine', widget: image, required: false }
+
+      - name: podcast
+        label: 'Podcast'
+        file: public/content/media/podcast.json
+        fields:
+          - name: episoade
+            label: 'Lista de episoade'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: data, label: 'Data (AAAA-LL-ZZ)', widget: string }
+              - { name: link, label: 'Link (Spotify etc.)', widget: string }
+              - { name: descriere, label: 'Descriere', widget: text }
+              - { name: thumbnail, label: 'Imagine', widget: image, required: false }
+
+      - name: evenimente
+        label: 'Evenimente'
+        file: public/content/evenimente.json
+        fields:
+          - name: evenimente
+            label: 'Lista de evenimente'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: data, label: 'Data (AAAA-LL-ZZ)', widget: string }
+              - { name: interval, label: 'Interval orar', widget: string }
+              - { name: locatie, label: 'Locație', widget: string }
+
+  - name: articole
+    label: 'Articole'
+    label_singular: 'Articol'
+    folder: public/content/articole
+    extension: md
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { name: titlu, label: 'Titlu', widget: string }
+      - { name: data, label: 'Data', widget: datetime, format: 'YYYY-MM-DD', time_format: false }
+      - { name: coperta, label: 'Imagine de copertă', widget: image, required: false }
+      - { name: rezumat, label: 'Rezumat', widget: text }
+      - { name: body, label: 'Conținut', widget: markdown }

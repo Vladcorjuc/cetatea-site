@@ -1,0 +1,19 @@
+{
+  "numeBiserica": "Cetatea",
+  "denumireCompleta": "Biserica Penticostală Cetatea",
+  "motto": "Domnul este stânca mea, cetățuia mea, izbăvitorul meu! (Psalmul 18:2)",
+  "adresa": "Lisaura, comuna Ipotești",
+  "oras": "Suceava",
+  "email": "contact@bisericacetatea.ro",
+  "telefon": "+40 700 000 000",
+  "programDuminica": [
+    { "titlu": "Slujba de duminică", "interval": "10:00 - 12:00" },
+    { "titlu": "Rugăciune", "interval": "Miercuri, 19:00" }
+  ],
+  "retele": [
+    { "nume": "Facebook", "link": "https://facebook.com" },
+    { "nume": "Youtube", "link": "https://youtube.com" },
+    { "nume": "Instagram", "link": "https://instagram.com" },
+    { "nume": "Spotify", "link": "https://open.spotify.com" }
+  ]
+}
