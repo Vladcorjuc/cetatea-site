@@ -4,7 +4,7 @@
 # real de GitHub și `base_url` cu adresa proxy-ului OAuth (vezi SETUP.md).
 backend:
   name: github
-  repo: NUME_UTILIZATOR/cetatea-site
+  repo: Vladcorjuc/cetatea-site
   branch: main
   base_url: https://COMPLETEAZA-PROXY-OAUTH.example.com
 
