@@ -14,7 +14,7 @@ backend:
 locale: ro
 site_url: /
 display_url: /
-logo_url: assets/logo/lockup-vertical-cream.svg
+logo_url: /cetatea-site/assets/logo/lockup-vertical-cream.svg
 
 media_folder: public/assets/uploads
 public_folder: assets/uploads
