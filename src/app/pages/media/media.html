@@ -1,7 +1,7 @@
 <section class="page-hero">
   <div class="container">
-    <span class="eyebrow eyebrow--inverse">Resurse</span>
-    <h1>Media</h1>
+    <span class="eyebrow eyebrow--inverse">{{ i18n.t('media.eyebrow') }}</span>
+    <h1>{{ i18n.t('media.titlu') }}</h1>
   </div>
 </section>
 
@@ -17,7 +17,7 @@
           [attr.aria-selected]="sectiune() === s.id"
           (click)="selecteaza(s.id)"
         >
-          {{ s.text }}
+          {{ i18n.t(s.cheie) }}
         </button>
       }
     </div>
@@ -40,7 +40,7 @@
               </div>
             </a>
           } @empty {
-            <p class="media-gol">Nu sunt predici disponibile momentan.</p>
+            <p class="media-gol">{{ i18n.t('media.faraPredici') }}</p>
           }
         </div>
       }
@@ -61,7 +61,7 @@
               </div>
             </a>
           } @empty {
-            <p class="media-gol">Nu sunt episoade disponibile momentan.</p>
+            <p class="media-gol">{{ i18n.t('media.faraPodcast') }}</p>
           }
         </div>
       }
@@ -80,7 +80,7 @@
               </div>
             </a>
           } @empty {
-            <p class="media-gol">Nu sunt articole publicate momentan.</p>
+            <p class="media-gol">{{ i18n.t('media.faraArticole') }}</p>
           }
         </div>
       }

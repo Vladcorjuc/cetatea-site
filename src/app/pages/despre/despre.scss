@@ -27,33 +27,83 @@
   }
 }
 
-.obiective-list {
+.valori-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-2);
 
   li {
     display: flex;
-    align-items: flex-start;
-    gap: 0.85rem;
+    align-items: center;
+    gap: 0.75rem;
     background: var(--color-white);
+    border: 1px solid var(--color-line);
     border-radius: var(--radius-md);
-    padding: var(--space-3);
+    padding: 0.9rem var(--space-2);
+    font-weight: 600;
+    counter-increment: valoare;
+
+    &::before {
+      content: counter(valoare);
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--color-accent);
+      color: var(--color-on-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
   }
 }
 
-.obiective-list__numar {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
+.valori-list {
+  counter-reset: valoare;
+}
+
+.strategie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-3);
+}
+
+.strategie-card {
+  position: relative;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) var(--space-3) var(--space-3);
+  box-shadow: var(--shadow-card);
+
+  h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.5rem;
+    max-width: 90%;
+  }
+
+  p {
+    margin: 0;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+}
+
+.strategie-card__numar {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
-  background: var(--color-accent);
-  color: var(--color-on-accent);
+  background: var(--color-bg-accent);
+  color: var(--color-accent);
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-family: var(--font-heading);
 }
 
 @media (max-width: 860px) {

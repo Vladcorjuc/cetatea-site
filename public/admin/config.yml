@@ -61,7 +61,7 @@ collections:
     files:
       - name: acasa
         label: 'Pagina Acasă'
-        file: public/content/pagini/acasa.json
+        file: public/content/ro/acasa.json
         fields:
           - { name: heroEyebrow, label: 'Text mic deasupra titlului', widget: string }
           - { name: heroTitluLinia1, label: 'Titlu — primul rând', widget: string }
@@ -84,7 +84,7 @@ collections:
 
       - name: despre
         label: 'Pagina Despre noi'
-        file: public/content/pagini/despre.json
+        file: public/content/ro/despre.json
         fields:
           - { name: titlu, label: 'Titlul paginii', widget: string }
           - { name: cineSuntemTitlu, label: 'Titlu „Cine suntem”', widget: string }
@@ -93,12 +93,23 @@ collections:
           - { name: scopText, label: 'Text „Scop”', widget: text }
           - { name: viziuneTitlu, label: 'Titlu „Viziune”', widget: string }
           - { name: viziuneText, label: 'Text „Viziune”', widget: text }
-          - { name: obiectiveTitlu, label: 'Titlu „Obiective”', widget: string }
+          - { name: misiuneTitlu, label: 'Titlu „Misiune”', widget: string }
+          - { name: misiuneText, label: 'Text „Misiune”', widget: text }
+          - { name: obiectiveTitlu, label: 'Eticheta secțiunii „Valori”', widget: string }
+          - { name: obiectiveSubtitlu, label: 'Subtitlu „Valori”', widget: string }
           - name: obiective
-            label: 'Obiective și valori'
+            label: 'Valori'
             widget: list
             fields:
-              - { name: text, label: 'Text', widget: string }
+              - { name: text, label: 'Valoare', widget: string }
+          - { name: strategieTitlu, label: 'Eticheta secțiunii „Strategie”', widget: string }
+          - { name: strategieSubtitlu, label: 'Subtitlu „Strategie”', widget: string }
+          - name: strategie
+            label: 'Puncte de strategie'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Titlu', widget: string }
+              - { name: text, label: 'Text', widget: text }
           - { name: ceCredemTitlu, label: 'Titlu „Ce credem”', widget: string }
           - { name: ceCredemVerset, label: 'Verset', widget: string }
           - { name: ceCredemVersetReferinta, label: 'Referința versetului', widget: string }
@@ -109,9 +120,9 @@ collections:
               - { name: titlu, label: 'Titlu', widget: string }
               - { name: text, label: 'Text', widget: text }
 
-      - name: grupuri
-        label: 'Pagina Grupuri'
-        file: public/content/pagini/grupuri.json
+      - name: comunitate
+        label: 'Pagina Comunitate'
+        file: public/content/ro/comunitate.json
         fields:
           - { name: titlu, label: 'Titlul paginii', widget: string }
           - { name: introText, label: 'Text introductiv', widget: text }
@@ -126,10 +137,110 @@ collections:
 
       - name: contact
         label: 'Pagina Contact'
-        file: public/content/pagini/contact.json
+        file: public/content/ro/contact.json
         fields:
           - { name: titlu, label: 'Titlul paginii', widget: string }
           - { name: introText, label: 'Text introductiv', widget: text }
+
+      - name: general
+        label: 'General (motto)'
+        file: public/content/ro/general.json
+        fields:
+          - { name: motto, label: 'Motto / verset (subsol)', widget: string }
+
+  - name: pagini_en
+    label: 'Pagini (English)'
+    editor:
+      preview: false
+    files:
+      - name: acasa_en
+        label: 'Home page'
+        file: public/content/en/acasa.json
+        fields:
+          - { name: heroEyebrow, label: 'Small text above title', widget: string }
+          - { name: heroTitluLinia1, label: 'Title — first line', widget: string }
+          - { name: heroTitluLinia2, label: 'Title — second line', widget: string }
+          - { name: heroSubtitlu, label: 'Subtitle', widget: text }
+          - { name: heroButonText, label: 'Button text', widget: string }
+          - { name: heroButonRuta, label: 'Button route (e.g. /contact)', widget: string }
+          - { name: heroImagine, label: 'Background image', widget: image, required: false }
+          - { name: misiuneTitlu, label: 'Mission section title', widget: string }
+          - { name: misiuneText, label: 'Mission text', widget: text }
+          - name: carduri
+            label: 'Ministry cards'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Title', widget: string }
+              - { name: text, label: 'Text', widget: text }
+              - { name: linkText, label: 'Link text', widget: string }
+              - { name: linkRuta, label: 'Link route (e.g. /comunitate)', widget: string }
+          - { name: evenimenteTitlu, label: 'Events section title', widget: string }
+
+      - name: despre_en
+        label: 'About page'
+        file: public/content/en/despre.json
+        fields:
+          - { name: titlu, label: 'Page title', widget: string }
+          - { name: cineSuntemTitlu, label: 'Title „Who we are”', widget: string }
+          - { name: cineSuntemText, label: 'Text „Who we are”', widget: text }
+          - { name: scopTitlu, label: 'Title „Purpose”', widget: string }
+          - { name: scopText, label: 'Text „Purpose”', widget: text }
+          - { name: viziuneTitlu, label: 'Title „Vision”', widget: string }
+          - { name: viziuneText, label: 'Text „Vision”', widget: text }
+          - { name: misiuneTitlu, label: 'Title „Mission”', widget: string }
+          - { name: misiuneText, label: 'Text „Mission”', widget: text }
+          - { name: obiectiveTitlu, label: 'Values section label', widget: string }
+          - { name: obiectiveSubtitlu, label: 'Values subtitle', widget: string }
+          - name: obiective
+            label: 'Values'
+            widget: list
+            fields:
+              - { name: text, label: 'Value', widget: string }
+          - { name: strategieTitlu, label: 'Strategy section label', widget: string }
+          - { name: strategieSubtitlu, label: 'Strategy subtitle', widget: string }
+          - name: strategie
+            label: 'Strategy points'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Title', widget: string }
+              - { name: text, label: 'Text', widget: text }
+          - { name: ceCredemTitlu, label: 'Title „What we believe”', widget: string }
+          - { name: ceCredemVerset, label: 'Verse', widget: string }
+          - { name: ceCredemVersetReferinta, label: 'Verse reference', widget: string }
+          - name: ceCredem
+            label: 'Statements of faith (tabs)'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Title', widget: string }
+              - { name: text, label: 'Text', widget: text }
+
+      - name: comunitate_en
+        label: 'Community page'
+        file: public/content/en/comunitate.json
+        fields:
+          - { name: titlu, label: 'Page title', widget: string }
+          - { name: introText, label: 'Intro text', widget: text }
+          - name: grupuri
+            label: 'Groups'
+            widget: list
+            fields:
+              - { name: titlu, label: 'Title', widget: string }
+              - { name: descriere, label: 'Description', widget: text }
+              - { name: program, label: 'Schedule (e.g. Friday, 19:00)', widget: string }
+              - { name: imagine, label: 'Image', widget: image, required: false }
+
+      - name: contact_en
+        label: 'Contact page'
+        file: public/content/en/contact.json
+        fields:
+          - { name: titlu, label: 'Page title', widget: string }
+          - { name: introText, label: 'Intro text', widget: text }
+
+      - name: general_en
+        label: 'General (motto)'
+        file: public/content/en/general.json
+        fields:
+          - { name: motto, label: 'Motto / verse (footer)', widget: string }
 
   - name: media
     label: 'Media'

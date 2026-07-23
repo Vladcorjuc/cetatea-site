@@ -1,0 +1,83 @@
+{
+  "titlu": "Despre noi",
+  "cineSuntemTitlu": "Cine suntem?",
+  "cineSuntemText": "Biserica Penticostală Cetatea este o comunitate creștină din Lisaura, Suceava. Ne dorim să fim o Cetate a lui Dumnezeu — o comunitate de credincioși maturi, echipați să ducă Evanghelia și să trăiască principiile Împărăției în toate domeniile societății.",
+  "scopTitlu": "Scop",
+  "scopText": "Îl glorificăm pe Dumnezeu prin edificarea Bisericii lui Hristos pentru transformarea societății și pentru lărgirea Împărăției Sale.",
+  "viziuneTitlu": "Viziune",
+  "viziuneText": "O Cetate a lui Dumnezeu formată din credincioși maturi, echipați să ducă Evanghelia și să trăiască principiile Împărăției în toate domeniile societății.",
+  "misiuneTitlu": "Misiune",
+  "misiuneText": "Comunicarea Evangheliei prin metode relevante și creative, creșterea spirituală prin ucenicie relațională, echiparea membrilor în vederea slujirii comunității și multiplicarea bisericii lui Hristos.",
+  "obiectiveTitlu": "Valori",
+  "obiectiveSubtitlu": "Valorile care ne definesc",
+  "obiective": [
+    { "text": "Cristocentrarea" },
+    { "text": "Sfințenia" },
+    { "text": "Integritatea" },
+    { "text": "Fidelitatea Scripturală" },
+    { "text": "Ucenicia" },
+    { "text": "Părtășia" },
+    { "text": "Închinarea" },
+    { "text": "Conducerea împărtășită" },
+    { "text": "Evanghelizarea" },
+    { "text": "Relevanță în societate" },
+    { "text": "Familia" }
+  ],
+  "strategieTitlu": "Strategia generală",
+  "strategieSubtitlu": "Cum împlinim misiunea",
+  "strategie": [
+    {
+      "titlu": "Formare prin ucenicie relațională",
+      "text": "Ucenicia biblică este trăită și cultivată în mod intenționat în cadrul grupurilor de ucenicie și al grupurilor de casă, unde oamenii cresc spiritual prin relații autentice, responsabilitate reciprocă și aplicarea practică a Scripturii. Accentul cade pe împlinirea scopului bisericii și pe calitatea relațiilor din comunitate, nu pe programe sau activități bisericești."
+    },
+    {
+      "titlu": "Rugăciune și dependența de Dumnezeu",
+      "text": "Viața bisericii este așezată pe rugăciune și pe o atitudine constantă de dependență de Dumnezeu, cultivată prin întâlniri regulate de rugăciune, lanțuri de rugăciune și prin crearea unui mediu de închinare comunitară."
+    },
+    {
+      "titlu": "Echiparea pentru slujire",
+      "text": "Credincioșii sunt ajutați să-și descopere darurile spirituale și abilitățile personale, fiind încurajați și susținuți prin consiliere, mentorare și coaching, astfel încât fiecare să-și găsească locul în slujire. Echiparea vizează implicarea flexibilă în diverse domenii de slujire, precum lucrarea cu copiii și tinerii, comunicarea și alte arii necesare pentru dezvoltarea sănătoasă a bisericii."
+    },
+    {
+      "titlu": "Implicare misionară relevantă în comunitate",
+      "text": "Biserica urmărește să comunice Evanghelia într-un limbaj relevant și creativ, prin evanghelizare relațională și prin implicare practică în nevoile comunității. Aceasta include sprijin pentru familii, organizarea unui program de tip afterschool, activități pentru copii și tineri și acțiuni de ajutorare concretă. De asemenea, sunt organizate evenimente cu „punți culturale” – seri tematice, activități comunitare și proiecte creative – care creează contexte naturale de dialog și deschidere spre mesajul Evangheliei."
+    },
+    {
+      "titlu": "Multiplicare sănătoasă",
+      "text": "Biserica urmărește o creștere sănătoasă care se exprimă prin multiplicare, nu doar prin extindere numerică. Aceasta presupune multiplicarea grupelor mici, formarea de noi lideri, trimiterea de echipe pentru susținerea bisericilor mici, inițierea de puncte de misiune și implicarea în plantarea de biserici."
+    }
+  ],
+  "ceCredemTitlu": "Ce credem",
+  "ceCredemVerset": "Fiindcă noi umblăm prin credință, nu prin vedere.",
+  "ceCredemVersetReferinta": "2 Corinteni 5:7",
+  "ceCredem": [
+    {
+      "titlu": "Sfânta Scriptură",
+      "text": "Credem că Biblia, Vechiul și Noul Testament, este Cuvântul inspirat de Dumnezeu, fără greșeală în forma ei originală și singura autoritate deplină pentru credința și viața noastră."
+    },
+    {
+      "titlu": "Dumnezeu",
+      "text": "Credem într-un singur Dumnezeu, veșnic, care există în trei persoane — Tatăl, Fiul și Duhul Sfânt — deopotrivă divine, egale în ființă și lucrare."
+    },
+    {
+      "titlu": "Omul",
+      "text": "Credem că omul a fost creat după chipul lui Dumnezeu, dar prin neascultare a căzut în păcat, pierzând părtășia cu Dumnezeu și având nevoie de mântuire."
+    },
+    {
+      "titlu": "Mântuirea",
+      "text": "Credem că mântuirea este un dar al harului lui Dumnezeu, primit prin credința în jertfa și învierea lui Isus Cristos, și nu prin fapte proprii."
+    },
+    {
+      "titlu": "Botezul și darurile Duhului Sfânt",
+      "text": "Credem în botezul cu Duhul Sfânt ca experiență distinctă, care ne echipează cu putere pentru slujire și mărturie, însoțită de darurile spirituale descrise în Scriptură."
+    },
+    {
+      "titlu": "Biserica",
+      "text": "Credem că biserica este trupul lui Cristos pe pământ, o familie de credincioși chemați împreună la închinare, ucenicie, părtășie și slujire."
+    },
+    {
+      "titlu": "Lucrurile din urmă",
+      "text": "Credem în revenirea personală și vizibilă a lui Isus Cristos, în învierea morților și în judecata finală, când Dumnezeu va face toate lucrurile noi."
+    }
+  ]
+}

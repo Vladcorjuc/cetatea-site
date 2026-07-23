@@ -30,7 +30,7 @@
   <section class="section">
     <div class="container mission">
       <div class="section-head section-head--center">
-        <span class="eyebrow">Cine suntem</span>
+        <span class="eyebrow">{{ i18n.t('acasa.cineSuntem') }}</span>
         <h2>{{ p.misiuneTitlu }}</h2>
       </div>
       <p class="mission__text">{{ p.misiuneText }}</p>
@@ -50,7 +50,7 @@
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Calendar</span>
+        <span class="eyebrow">{{ i18n.t('acasa.calendar') }}</span>
         <h2>{{ p.evenimenteTitlu }}</h2>
       </div>
       <ul class="evenimente-list">
@@ -63,7 +63,7 @@
             </div>
           </li>
         } @empty {
-          <li class="evenimente-list__gol">Nu sunt evenimente programate momentan.</li>
+          <li class="evenimente-list__gol">{{ i18n.t('acasa.faraEvenimente') }}</li>
         }
       </ul>
     </div>

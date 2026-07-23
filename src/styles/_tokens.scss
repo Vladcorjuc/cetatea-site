@@ -25,6 +25,13 @@
   --color-accent-hover: var(--color-terracotta-dark);
   --color-on-accent: var(--color-white);
 
+  // "Inverse" sections that are dark in both themes (footer, page hero).
+  --color-dark-section: #2e2a24;
+  --color-on-dark: #eee8de;
+  --color-on-dark-muted: rgba(238, 232, 222, 0.75);
+  --color-on-dark-line: rgba(238, 232, 222, 0.15);
+  --color-on-dark-chip: rgba(238, 232, 222, 0.1);
+
   // Typography
   --font-heading: 'Fraunces', Georgia, serif;
   --font-body: 'Karla', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -42,4 +49,37 @@
   --space-4: 2.5rem;
   --space-5: 4rem;
   --space-6: 6rem;
+}
+
+// Dark theme — a warm mid-charcoal built from the logo's dark field (#2E2E2E),
+// deliberately softer/lower-contrast than a near-black scheme. Applied via
+// [data-theme="dark"] on <html> by ThemeService.
+:root[data-theme='dark'] {
+  --color-terracotta: #e8825e;
+  --color-terracotta-dark: #d6673b;
+  --color-terracotta-light: #f0a07e;
+
+  --color-cream: #35302a;
+  --color-cream-soft: #322d28;
+  --color-white: #35302a;
+  --color-ink: #ece4d7;
+  --color-ink-soft: #ada291;
+  --color-line: #453f37;
+
+  --color-bg: #2b2723;
+  --color-bg-alt: #322d28;
+  --color-bg-accent: #3b342d;
+  --color-text: #ece4d7;
+  --color-text-muted: #ada291;
+  --color-accent: #e8825e;
+  --color-accent-hover: #f0a07e;
+  --color-on-accent: #2b2723;
+
+  --color-dark-section: #26221d;
+  --color-on-dark: #ece4d7;
+  --color-on-dark-muted: rgba(236, 228, 215, 0.72);
+  --color-on-dark-line: rgba(236, 228, 215, 0.12);
+  --color-on-dark-chip: rgba(236, 228, 215, 0.08);
+
+  --shadow-card: 0 12px 32px -16px rgba(0, 0, 0, 0.45);
 }

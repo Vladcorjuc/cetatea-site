@@ -1,7 +1,7 @@
 @if (pagina(); as p) {
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow eyebrow--inverse">Despre noi</span>
+      <span class="eyebrow eyebrow--inverse">{{ i18n.t('despre.eyebrow') }}</span>
       <h1>{{ p.titlu }}</h1>
     </div>
   </section>
@@ -21,6 +21,10 @@
           <h3>{{ p.viziuneTitlu }}</h3>
           <p>{{ p.viziuneText }}</p>
         </div>
+        <div class="despre-card">
+          <h3>{{ p.misiuneTitlu }}</h3>
+          <p>{{ p.misiuneText }}</p>
+        </div>
       </div>
     </div>
   </section>
@@ -29,24 +33,39 @@
     <div class="container">
       <div class="section-head section-head--center">
         <span class="eyebrow">{{ p.obiectiveTitlu }}</span>
-        <h2>Cum trăim credința împreună</h2>
+        <h2>{{ p.obiectiveSubtitlu }}</h2>
       </div>
-      <ol class="obiective-list">
-        @for (obiectiv of p.obiective; track obiectiv.text; let i = $index) {
-          <li>
-            <span class="obiective-list__numar">{{ i + 1 }}</span>
-            <span>{{ obiectiv.text }}</span>
-          </li>
+      <ul class="valori-list">
+        @for (obiectiv of p.obiective; track obiectiv.text) {
+          <li>{{ obiectiv.text }}</li>
         }
-      </ol>
+      </ul>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
       <div class="section-head section-head--center">
+        <span class="eyebrow">{{ p.strategieTitlu }}</span>
+        <h2>{{ p.strategieSubtitlu }}</h2>
+      </div>
+      <div class="strategie-grid">
+        @for (punct of p.strategie; track punct.titlu; let i = $index) {
+          <article class="strategie-card">
+            <span class="strategie-card__numar">{{ i + 1 }}</span>
+            <h3>{{ punct.titlu }}</h3>
+            <p>{{ punct.text }}</p>
+          </article>
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head section-head--center">
         <span class="eyebrow">{{ p.ceCredemTitlu }}</span>
-        <h2>Mărturisirea noastră de credință</h2>
+        <h2>{{ i18n.t('despre.ceCredemSubtitlu') }}</h2>
         <p class="verset">
           „{{ p.ceCredemVerset }}” <span>— {{ p.ceCredemVersetReferinta }}</span>
         </p>

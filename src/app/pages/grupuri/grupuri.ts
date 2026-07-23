@@ -1,5 +1,6 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { Content } from '../../core/services/content';
+import { Language } from '../../core/services/language';
 import { PaginaGrupuri } from '../../core/models/content.model';
 
 @Component({
@@ -10,10 +11,15 @@ import { PaginaGrupuri } from '../../core/models/content.model';
 })
 export class Grupuri {
   private readonly content = inject(Content);
+  protected readonly i18n = inject(Language);
 
   protected readonly pagina = signal<PaginaGrupuri | null>(null);
 
   constructor() {
-    this.content.getPaginaGrupuri().subscribe((pagina) => this.pagina.set(pagina));
+    effect(() => {
+      this.content
+        .getPaginaComunitate(this.i18n.lang())
+        .subscribe((pagina) => this.pagina.set(pagina));
+    });
   }
 }

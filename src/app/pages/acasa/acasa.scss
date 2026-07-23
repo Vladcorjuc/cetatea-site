@@ -3,7 +3,7 @@
   min-height: 88vh;
   display: flex;
   align-items: flex-end;
-  color: var(--color-white);
+  color: #ffffff;
   overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
   inset: 0;
   background-size: cover;
   background-position: center;
-  background-color: var(--color-ink);
+  background-color: #2e2a24;
 }
 
 .hero__scrim {
@@ -37,7 +37,7 @@
 }
 
 .hero h1 {
-  color: var(--color-white);
+  color: #ffffff;
   margin-bottom: var(--space-2);
 }
 
@@ -67,7 +67,7 @@
 
   strong {
     font-size: 0.85rem;
-    color: var(--color-white);
+    color: #ffffff;
   }
 
   span {

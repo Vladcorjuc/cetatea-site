@@ -1,0 +1,24 @@
+{
+  "titlu": "Community",
+  "introText": "Small groups are where faith becomes everyday — we pray for one another, study Scripture together and support each other in good times and hard ones. Join a group near you.",
+  "grupuri": [
+    {
+      "titlu": "Youth group",
+      "descriere": "For teenagers and young adults — time for worship, open conversations and genuine friendships.",
+      "program": "Friday, 19:00",
+      "imagine": "assets/images/grup-tineret.jpg"
+    },
+    {
+      "titlu": "Families group",
+      "descriere": "Couples and families growing together in faith and supporting one another.",
+      "program": "Thursday, 19:00",
+      "imagine": "assets/images/grup-familii.jpg"
+    },
+    {
+      "titlu": "Prayer group",
+      "descriere": "A time dedicated to prayer for the church, the community and everyone's needs.",
+      "program": "Wednesday, 19:00",
+      "imagine": "assets/images/grup-rugaciune.jpg"
+    }
+  ]
+}

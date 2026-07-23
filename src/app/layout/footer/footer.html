@@ -1,15 +1,15 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <img src="assets/logo/lockup-vertical-cream.svg" alt="Biserica Cetatea" class="footer__logo" />
-      @if (site(); as s) {
-        <p class="footer__motto">{{ s.motto }}</p>
+      <img src="assets/logo/badge-vertical-terracotta.svg" alt="Biserica Penticostală Cetatea" class="footer__logo" />
+      @if (general(); as g) {
+        <p class="footer__motto">{{ g.motto }}</p>
       }
     </div>
 
     @if (site(); as s) {
       <div class="footer__col">
-        <h3>Contact</h3>
+        <h3>{{ i18n.t('footer.contact') }}</h3>
         <ul>
           <li>{{ s.adresa }}, {{ s.oras }}</li>
           <li><a [href]="'mailto:' + s.email">{{ s.email }}</a></li>
@@ -18,7 +18,7 @@
       </div>
 
       <div class="footer__col">
-        <h3>Program</h3>
+        <h3>{{ i18n.t('footer.program') }}</h3>
         <ul>
           @for (p of s.programDuminica; track p.titlu) {
             <li>{{ p.titlu }} — {{ p.interval }}</li>
@@ -27,7 +27,7 @@
       </div>
 
       <div class="footer__col">
-        <h3>Urmărește-ne</h3>
+        <h3>{{ i18n.t('footer.urmareste') }}</h3>
         <div class="footer__social">
           @for (retea of s.retele; track retea.nume) {
             <a [href]="retea.link" target="_blank" rel="noopener" [attr.aria-label]="retea.nume">
@@ -42,7 +42,7 @@
   </div>
 
   <div class="container footer__bottom">
-    <span>© {{ anAcesta }} {{ site()?.denumireCompleta ?? 'Biserica Cetatea' }}</span>
-    <a routerLink="/contact">Contact</a>
+    <span>© {{ anAcesta }} {{ site()?.denumireCompleta ?? 'Biserica Penticostală Cetatea' }}</span>
+    <a routerLink="/contact">{{ i18n.t('footer.contact') }}</a>
   </div>
 </footer>

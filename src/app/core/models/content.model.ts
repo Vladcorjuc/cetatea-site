@@ -1,13 +1,16 @@
 export interface SiteSettings {
   numeBiserica: string;
   denumireCompleta: string;
-  motto: string;
   adresa: string;
   oras: string;
   email: string;
   telefon: string;
   programDuminica: ProgramIntalnire[];
   retele: RetelSociala[];
+}
+
+export interface PaginaGenerala {
+  motto: string;
 }
 
 export interface ProgramIntalnire {
@@ -55,6 +58,11 @@ export interface ArticolCredinta {
   text: string;
 }
 
+export interface PunctStrategie {
+  titlu: string;
+  text: string;
+}
+
 export interface PaginaDespre {
   titlu: string;
   cineSuntemTitlu: string;
@@ -63,8 +71,14 @@ export interface PaginaDespre {
   scopText: string;
   viziuneTitlu: string;
   viziuneText: string;
+  misiuneTitlu: string;
+  misiuneText: string;
   obiectiveTitlu: string;
+  obiectiveSubtitlu: string;
   obiective: ObiectivValoare[];
+  strategieTitlu: string;
+  strategieSubtitlu: string;
+  strategie: PunctStrategie[];
   ceCredemTitlu: string;
   ceCredemVerset: string;
   ceCredemVersetReferinta: string;

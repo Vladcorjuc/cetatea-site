@@ -1,7 +1,8 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { Content } from '../../core/services/content';
-import { SiteSettings } from '../../core/models/content.model';
+import { Language } from '../../core/services/language';
+import { PaginaGenerala, SiteSettings } from '../../core/models/content.model';
 
 const ICOANE_RETELE: Record<string, string> = {
   Facebook: 'M13.5 9H15V6h-1.5C11.6 6 10 7.6 10 9.5V11H8v3h2v7h3v-7h2.2l.3-3H13v-1.2c0-.5.4-.8.9-.8Z',
@@ -23,12 +24,17 @@ const ICOANE_RETELE: Record<string, string> = {
 })
 export class Footer {
   private readonly content = inject(Content);
+  protected readonly i18n = inject(Language);
 
   protected readonly site = signal<SiteSettings | null>(null);
+  protected readonly general = signal<PaginaGenerala | null>(null);
   protected readonly anAcesta = new Date().getFullYear();
 
   constructor() {
     this.content.getSiteSettings().subscribe((site) => this.site.set(site));
+    effect(() => {
+      this.content.getGeneral(this.i18n.lang()).subscribe((g) => this.general.set(g));
+    });
   }
 
   iconaPentru(nume: string): string {

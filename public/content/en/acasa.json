@@ -1,0 +1,26 @@
+{
+  "heroEyebrow": "Pentecostal Church",
+  "heroTitluLinia1": "A stronghold of",
+  "heroTitluLinia2": "faith and family",
+  "heroSubtitlu": "We are a Christian community in Lisaura, Suceava, worshipping God and growing together as a family. Come as you are — you are warmly welcome.",
+  "heroButonText": "See the schedule",
+  "heroButonRuta": "/contact",
+  "heroImagine": "assets/images/hero-acasa.jpg",
+  "misiuneTitlu": "The church is not a building",
+  "misiuneText": "Cetatea is a community of people united around the Gospel of Jesus Christ. We gather on Sundays to worship and to learn from God's Word, and throughout the week we meet in small groups, where faith takes root in everyday life and in our relationships with one another.",
+  "carduri": [
+    {
+      "titlu": "In public",
+      "text": "On Sundays we gather to worship through prayer, praise and the proclamation of the Gospel.",
+      "linkText": "Sunday schedule",
+      "linkRuta": "/contact"
+    },
+    {
+      "titlu": "In homes",
+      "text": "This is where community is born — we go deeper into the Word, pray for one another and share life's joys and hardships.",
+      "linkText": "See the community",
+      "linkRuta": "/comunitate"
+    }
+  ],
+  "evenimenteTitlu": "What's next"
+}

@@ -1,8 +1,8 @@
 <section class="section not-found">
   <div class="container">
     <span class="eyebrow">404</span>
-    <h1>Pagina nu a fost găsită</h1>
-    <p>Se pare că pagina căutată nu există sau a fost mutată.</p>
-    <a routerLink="/" class="btn btn-primary">Înapoi acasă</a>
+    <h1>{{ i18n.t('notFound.titlu') }}</h1>
+    <p>{{ i18n.t('notFound.text') }}</p>
+    <a routerLink="/" class="btn btn-primary">{{ i18n.t('notFound.buton') }}</a>
   </div>
 </section>

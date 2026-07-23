@@ -1,7 +1,7 @@
 @if (pagina(); as p) {
   <section class="page-hero">
     <div class="container">
-      <span class="eyebrow eyebrow--inverse">Vino la Cetatea</span>
+      <span class="eyebrow eyebrow--inverse">{{ i18n.t('contact.eyebrow') }}</span>
       <h1>{{ p.titlu }}</h1>
     </div>
   </section>
@@ -14,19 +14,19 @@
         @if (site(); as s) {
           <ul class="contact-list">
             <li>
-              <strong>Adresă</strong>
+              <strong>{{ i18n.t('contact.adresa') }}</strong>
               <span>{{ s.adresa }}, {{ s.oras }}</span>
             </li>
             <li>
-              <strong>Email</strong>
+              <strong>{{ i18n.t('contact.email') }}</strong>
               <a [href]="'mailto:' + s.email">{{ s.email }}</a>
             </li>
             <li>
-              <strong>Telefon</strong>
+              <strong>{{ i18n.t('contact.telefon') }}</strong>
               <a [href]="'tel:' + s.telefon">{{ s.telefon }}</a>
             </li>
             <li>
-              <strong>Program</strong>
+              <strong>{{ i18n.t('contact.program') }}</strong>
               <span>
                 @for (item of s.programDuminica; track item.titlu; let ultim = $last) {
                   {{ item.titlu }}: {{ item.interval }}{{ ultim ? '' : ' · ' }}
@@ -39,7 +39,7 @@
 
       <div class="contact-harta">
         <iframe
-          title="Harta — Lisaura, Suceava"
+          [title]="i18n.t('contact.harta')"
           src="https://www.openstreetmap.org/export/embed.html?bbox=26.29%2C47.65%2C26.35%2C47.69&layer=mapnik&marker=47.67%2C26.32"
           loading="lazy"
         ></iframe>

@@ -12,10 +12,11 @@ export const routes: Routes = [
     title: 'Despre noi | Biserica Cetatea',
   },
   {
-    path: 'grupuri',
+    path: 'comunitate',
     loadComponent: () => import('./pages/grupuri/grupuri').then((m) => m.Grupuri),
-    title: 'Grupuri | Biserica Cetatea',
+    title: 'Comunitate | Biserica Cetatea',
   },
+  { path: 'grupuri', redirectTo: 'comunitate', pathMatch: 'full' },
   {
     path: 'media',
     loadComponent: () => import('./pages/media/media').then((m) => m.Media),

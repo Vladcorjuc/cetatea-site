@@ -1,11 +1,7 @@
 <header class="header">
   <div class="container header__bar">
-    <a routerLink="/" class="header__brand" (click)="inchideMeniu()">
-      <img src="assets/logo/badge-terracotta.svg" alt="" class="header__mark" />
-      <span class="header__wordmark">
-        <strong>{{ site()?.numeBiserica ?? 'Cetatea' }}</strong>
-        <small>Biserica Penticostală</small>
-      </span>
+    <a routerLink="/" class="header__brand" (click)="inchideMeniu()" aria-label="Biserica Penticostală Cetatea">
+      <img src="assets/logo/badge-vertical-terracotta.svg" alt="Biserica Penticostală Cetatea" class="header__logo" />
     </a>
 
     <nav class="header__nav" [class.header__nav--open]="meniuDeschis()">
@@ -15,26 +11,55 @@
             <a
               [routerLink]="link.ruta"
               routerLinkActive="is-active"
-              [routerLinkActiveOptions]="{ exact: link.ruta === '/' }"
+              [routerLinkActiveOptions]="{ exact: link.exact }"
               (click)="inchideMeniu()"
             >
-              {{ link.text }}
+              {{ i18n.t(link.cheie) }}
             </a>
           </li>
         }
       </ul>
     </nav>
 
-    <button
-      type="button"
-      class="header__toggle"
-      (click)="toggleMeniu()"
-      [attr.aria-expanded]="meniuDeschis()"
-      aria-label="Comută meniul"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="header__actions">
+      <button
+        type="button"
+        class="header__icon-btn header__lang"
+        (click)="i18n.toggle()"
+        [attr.aria-label]="i18n.t('header.language')"
+      >
+        {{ i18n.lang() === 'ro' ? 'EN' : 'RO' }}
+      </button>
+
+      <button
+        type="button"
+        class="header__icon-btn"
+        (click)="theme.toggle()"
+        [attr.aria-label]="i18n.t('header.theme')"
+      >
+        @if (theme.mode() === 'dark') {
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+          </svg>
+        } @else {
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+          </svg>
+        }
+      </button>
+
+      <button
+        type="button"
+        class="header__toggle"
+        (click)="toggleMeniu()"
+        [attr.aria-expanded]="meniuDeschis()"
+        [attr.aria-label]="i18n.t('header.menu')"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
   </div>
 </header>

@@ -9,15 +9,21 @@ import {
   PaginaAcasa,
   PaginaContact,
   PaginaDespre,
+  PaginaGenerala,
   PaginaGrupuri,
   ResursaMedia,
   SiteSettings,
 } from '../models/content.model';
+import { Lang } from './language';
 
 // Every method reads a static JSON/Markdown file under public/content/.
 // Those files are the single source of truth for site text and are the
 // same files the Decap CMS admin panel (/admin) edits — nothing here is
 // hardcoded, so a content change never requires touching this service.
+//
+// Translatable page copy lives under content/{lang}/*.json; language-neutral
+// content (contact details, sermons, podcast, events, articles) stays under
+// content/ and is shared across languages.
 @Service()
 export class Content {
   private readonly http = inject(HttpClient);
@@ -26,20 +32,24 @@ export class Content {
     return this.http.get<SiteSettings>('content/site.json');
   }
 
-  getPaginaAcasa(): Observable<PaginaAcasa> {
-    return this.http.get<PaginaAcasa>('content/pagini/acasa.json');
+  getGeneral(lang: Lang): Observable<PaginaGenerala> {
+    return this.http.get<PaginaGenerala>(`content/${lang}/general.json`);
   }
 
-  getPaginaDespre(): Observable<PaginaDespre> {
-    return this.http.get<PaginaDespre>('content/pagini/despre.json');
+  getPaginaAcasa(lang: Lang): Observable<PaginaAcasa> {
+    return this.http.get<PaginaAcasa>(`content/${lang}/acasa.json`);
   }
 
-  getPaginaGrupuri(): Observable<PaginaGrupuri> {
-    return this.http.get<PaginaGrupuri>('content/pagini/grupuri.json');
+  getPaginaDespre(lang: Lang): Observable<PaginaDespre> {
+    return this.http.get<PaginaDespre>(`content/${lang}/despre.json`);
   }
 
-  getPaginaContact(): Observable<PaginaContact> {
-    return this.http.get<PaginaContact>('content/pagini/contact.json');
+  getPaginaComunitate(lang: Lang): Observable<PaginaGrupuri> {
+    return this.http.get<PaginaGrupuri>(`content/${lang}/comunitate.json`);
+  }
+
+  getPaginaContact(lang: Lang): Observable<PaginaContact> {
+    return this.http.get<PaginaContact>(`content/${lang}/contact.json`);
   }
 
   getPredici(): Observable<ResursaMedia[]> {

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { switchMap } from 'rxjs/operators';
 import { MarkdownPipe } from '../../../core/pipes/markdown-pipe';
 import { Content } from '../../../core/services/content';
+import { Language } from '../../../core/services/language';
 import { Articol } from '../../../core/models/content.model';
 
 @Component({
@@ -15,6 +16,7 @@ export class ArticolDetaliu {
   private readonly content = inject(Content);
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
+  protected readonly i18n = inject(Language);
 
   protected readonly articol = signal<Articol | null>(null);
 
@@ -29,7 +31,7 @@ export class ArticolDetaliu {
 
   formateazaData(data: string): string {
     if (!data) return '';
-    return new Date(data).toLocaleDateString('ro-RO', {
+    return new Date(data).toLocaleDateString(this.i18n.lang() === 'en' ? 'en-GB' : 'ro-RO', {
       day: 'numeric',
       month: 'long',
       year: 'numeric',

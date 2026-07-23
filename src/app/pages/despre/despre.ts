@@ -1,6 +1,7 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { CeCredem } from '../../shared/ce-credem/ce-credem';
 import { Content } from '../../core/services/content';
+import { Language } from '../../core/services/language';
 import { PaginaDespre } from '../../core/models/content.model';
 
 @Component({
@@ -11,10 +12,13 @@ import { PaginaDespre } from '../../core/models/content.model';
 })
 export class Despre {
   private readonly content = inject(Content);
+  protected readonly i18n = inject(Language);
 
   protected readonly pagina = signal<PaginaDespre | null>(null);
 
   constructor() {
-    this.content.getPaginaDespre().subscribe((pagina) => this.pagina.set(pagina));
+    effect(() => {
+      this.content.getPaginaDespre(this.i18n.lang()).subscribe((pagina) => this.pagina.set(pagina));
+    });
   }
 }

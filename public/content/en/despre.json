@@ -1,0 +1,83 @@
+{
+  "titlu": "About us",
+  "cineSuntemTitlu": "Who we are",
+  "cineSuntemText": "Cetatea Pentecostal Church is a Christian community in Lisaura, Suceava. We long to be a City of God — a community of mature believers, equipped to carry the Gospel and to live out the principles of the Kingdom in every area of society.",
+  "scopTitlu": "Purpose",
+  "scopText": "We glorify God by building up the Church of Christ, for the transformation of society and the expansion of His Kingdom.",
+  "viziuneTitlu": "Vision",
+  "viziuneText": "A City of God made up of mature believers, equipped to carry the Gospel and to live out the principles of the Kingdom in every area of society.",
+  "misiuneTitlu": "Mission",
+  "misiuneText": "Communicating the Gospel through relevant and creative means, spiritual growth through relational discipleship, equipping members for serving the community, and the multiplication of the church of Christ.",
+  "obiectiveTitlu": "Values",
+  "obiectiveSubtitlu": "The values that define us",
+  "obiective": [
+    { "text": "Christ-centeredness" },
+    { "text": "Holiness" },
+    { "text": "Integrity" },
+    { "text": "Faithfulness to Scripture" },
+    { "text": "Discipleship" },
+    { "text": "Fellowship" },
+    { "text": "Worship" },
+    { "text": "Shared leadership" },
+    { "text": "Evangelism" },
+    { "text": "Relevance in society" },
+    { "text": "Family" }
+  ],
+  "strategieTitlu": "Overall strategy",
+  "strategieSubtitlu": "How we carry out our mission",
+  "strategie": [
+    {
+      "titlu": "Growth through relational discipleship",
+      "text": "Biblical discipleship is lived out and cultivated intentionally within discipleship groups and home groups, where people grow spiritually through authentic relationships, mutual accountability and the practical application of Scripture. The emphasis is on fulfilling the church's purpose and on the quality of relationships in the community, not on programs or church activities."
+    },
+    {
+      "titlu": "Prayer and dependence on God",
+      "text": "The life of the church is founded on prayer and on a constant attitude of dependence on God, cultivated through regular prayer meetings, prayer chains and by creating an environment of communal worship."
+    },
+    {
+      "titlu": "Equipping for service",
+      "text": "Believers are helped to discover their spiritual gifts and personal abilities, being encouraged and supported through counseling, mentoring and coaching, so that each one finds their place in service. Equipping aims at flexible involvement in various areas of ministry, such as work with children and youth, communication and other areas needed for the healthy development of the church."
+    },
+    {
+      "titlu": "Relevant missional involvement in the community",
+      "text": "The church seeks to communicate the Gospel in a relevant and creative language, through relational evangelism and practical involvement in the needs of the community. This includes support for families, running an afterschool program, activities for children and youth, and concrete acts of help. Events with „cultural bridges” are also organized – themed evenings, community activities and creative projects – which create natural contexts for dialogue and openness to the message of the Gospel."
+    },
+    {
+      "titlu": "Healthy multiplication",
+      "text": "The church pursues healthy growth expressed through multiplication, not only through numerical expansion. This involves multiplying small groups, forming new leaders, sending teams to support small churches, initiating mission points and being involved in church planting."
+    }
+  ],
+  "ceCredemTitlu": "What we believe",
+  "ceCredemVerset": "For we walk by faith, not by sight.",
+  "ceCredemVersetReferinta": "2 Corinthians 5:7",
+  "ceCredem": [
+    {
+      "titlu": "Holy Scripture",
+      "text": "We believe that the Bible, the Old and New Testaments, is the Word inspired by God, without error in its original form and the only full authority for our faith and life."
+    },
+    {
+      "titlu": "God",
+      "text": "We believe in one eternal God who exists in three persons — the Father, the Son and the Holy Spirit — equally divine and equal in being and work."
+    },
+    {
+      "titlu": "Humanity",
+      "text": "We believe that man was created in the image of God, but through disobedience fell into sin, losing fellowship with God and being in need of salvation."
+    },
+    {
+      "titlu": "Salvation",
+      "text": "We believe that salvation is a gift of God's grace, received through faith in the sacrifice and resurrection of Jesus Christ, and not through our own works."
+    },
+    {
+      "titlu": "The baptism and gifts of the Holy Spirit",
+      "text": "We believe in the baptism in the Holy Spirit as a distinct experience that equips us with power for service and witness, accompanied by the spiritual gifts described in Scripture."
+    },
+    {
+      "titlu": "The Church",
+      "text": "We believe that the church is the body of Christ on earth, a family of believers called together to worship, discipleship, fellowship and service."
+    },
+    {
+      "titlu": "The last things",
+      "text": "We believe in the personal and visible return of Jesus Christ, in the resurrection of the dead and in the final judgment, when God will make all things new."
+    }
+  ]
+}
