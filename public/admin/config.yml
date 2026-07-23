@@ -20,8 +20,12 @@ media_folder: public/assets/uploads
 public_folder: assets/uploads
 
 collections:
+  # Panoul de previzualizare implicit al Decap nu seamănă cu site-ul real și
+  # poate produce erori la salvare; îl dezactivăm pentru toate colecțiile.
   - name: setari
     label: 'Setări generale'
+    editor:
+      preview: false
     files:
       - name: site
         label: 'Date de contact și program'
@@ -52,6 +56,8 @@ collections:
 
   - name: pagini
     label: 'Pagini'
+    editor:
+      preview: false
     files:
       - name: acasa
         label: 'Pagina Acasă'
@@ -127,6 +133,8 @@ collections:
 
   - name: media
     label: 'Media'
+    editor:
+      preview: false
     files:
       - name: predici
         label: 'Predici'
@@ -172,6 +180,8 @@ collections:
   - name: articole
     label: 'Articole'
     label_singular: 'Articol'
+    editor:
+      preview: false
     folder: public/content/articole
     extension: md
     create: true
