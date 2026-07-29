@@ -51,35 +51,35 @@
   --space-6: 6rem;
 }
 
-// Dark theme — a warm mid-charcoal built from the logo's dark field (#2E2E2E),
-// deliberately softer/lower-contrast than a near-black scheme. Applied via
-// [data-theme="dark"] on <html> by ThemeService.
+// Dark theme — a warm dark *variant* (principal color is the dark field from
+// the logo, #2E2E2E) that keeps the brand's bright, vivid orange accents
+// rather than muting into a dim night mode. Applied via [data-theme="dark"].
 :root[data-theme='dark'] {
-  --color-terracotta: #e8825e;
-  --color-terracotta-dark: #d6673b;
-  --color-terracotta-light: #f0a07e;
+  --color-terracotta: #f5823c;
+  --color-terracotta-dark: #e06a2f;
+  --color-terracotta-light: #ffa471;
 
-  --color-cream: #35302a;
-  --color-cream-soft: #322d28;
-  --color-white: #35302a;
-  --color-ink: #ece4d7;
-  --color-ink-soft: #ada291;
-  --color-line: #453f37;
+  --color-cream: #3f3830;
+  --color-cream-soft: #3a342c;
+  --color-white: #3f3830;
+  --color-ink: #faf7f1;
+  --color-ink-soft: #cec4b4;
+  --color-line: #4f4840;
 
-  --color-bg: #2b2723;
-  --color-bg-alt: #322d28;
-  --color-bg-accent: #3b342d;
-  --color-text: #ece4d7;
-  --color-text-muted: #ada291;
-  --color-accent: #e8825e;
-  --color-accent-hover: #f0a07e;
-  --color-on-accent: #2b2723;
+  --color-bg: #2f2a24;
+  --color-bg-alt: #38322b;
+  --color-bg-accent: #463e34;
+  --color-text: #faf7f1;
+  --color-text-muted: #cec4b4;
+  --color-accent: #f5823c;
+  --color-accent-hover: #ffa471;
+  --color-on-accent: #2a241f;
 
-  --color-dark-section: #26221d;
-  --color-on-dark: #ece4d7;
-  --color-on-dark-muted: rgba(236, 228, 215, 0.72);
-  --color-on-dark-line: rgba(236, 228, 215, 0.12);
-  --color-on-dark-chip: rgba(236, 228, 215, 0.08);
+  --color-dark-section: #2a241f;
+  --color-on-dark: #faf7f1;
+  --color-on-dark-muted: rgba(250, 247, 241, 0.78);
+  --color-on-dark-line: rgba(250, 247, 241, 0.16);
+  --color-on-dark-chip: rgba(250, 247, 241, 0.12);
 
-  --shadow-card: 0 12px 32px -16px rgba(0, 0, 0, 0.45);
+  --shadow-card: 0 12px 32px -16px rgba(0, 0, 0, 0.5);
 }

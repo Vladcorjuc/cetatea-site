@@ -27,8 +27,8 @@ export class Theme {
   }
 
   private readInitial(): ThemeMode {
+    // Light is the default; dark is opt-in via the toggle.
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved === 'light' || saved === 'dark') return saved;
-    return window.matchMedia?.('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return saved === 'dark' ? 'dark' : 'light';
   }
 }

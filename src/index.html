@@ -23,10 +23,7 @@
       // Apply saved theme/language before first paint to avoid a flash.
       (function () {
         try {
-          var t = localStorage.getItem('cetatea-theme');
-          if (t !== 'light' && t !== 'dark') {
-            t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-          }
+          var t = localStorage.getItem('cetatea-theme') === 'dark' ? 'dark' : 'light';
           document.documentElement.setAttribute('data-theme', t);
           var l = localStorage.getItem('cetatea-lang');
           if (l === 'ro' || l === 'en') document.documentElement.lang = l;
