@@ -1,17 +1,22 @@
-.despre-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: var(--space-4);
-  align-items: start;
+.despre-intro__text {
+  max-width: 70ch;
+  margin-bottom: var(--space-4);
+
+  p {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
 }
 
-.despre-grid__aside {
+.despre-carduri {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
+  flex-wrap: wrap;
+  gap: var(--space-3);
 }
 
 .despre-card {
+  flex: 1 1 260px;
   background: var(--color-bg-alt);
   border-radius: var(--radius-md);
   padding: var(--space-3);
@@ -27,41 +32,107 @@
   }
 }
 
-.valori-list {
+.valori-coloane {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--space-2);
-
-  li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    background: var(--color-white);
-    border: 1px solid var(--color-line);
-    border-radius: var(--radius-md);
-    padding: 0.9rem var(--space-2);
-    font-weight: 600;
-    counter-increment: valoare;
-
-    &::before {
-      content: counter(valoare);
-      flex-shrink: 0;
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background: var(--color-accent);
-      color: var(--color-on-accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.85rem;
-      font-weight: 700;
-    }
-  }
+  grid-template-columns: 1fr 1fr;
+  gap: 0 var(--space-4);
+  align-items: start;
 }
 
 .valori-list {
-  counter-reset: valoare;
+  display: flex;
+  flex-direction: column;
+}
+
+.valoare {
+  border-bottom: 1px solid var(--color-line);
+
+  &:first-child {
+    border-top: 1px solid var(--color-line);
+  }
+
+  &.is-open {
+    background: var(--color-bg-accent);
+  }
+}
+
+.valoare__cap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--color-text);
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+.valoare__nr {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  min-width: 1.6rem;
+}
+
+.valoare__nume {
+  flex: 1;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.valoare__sageata {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.valoare.is-open .valoare__sageata {
+  transform: rotate(-135deg);
+}
+
+.valoare__descriere {
+  margin: 0;
+  padding: 0 1rem 1.2rem 3.6rem;
+  color: var(--color-text-muted);
+  font-size: 1.02rem;
+  line-height: 1.65;
+  max-width: 62ch;
+  animation: valoare-in 0.2s ease;
+}
+
+@keyframes valoare-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 640px) {
+  .valori-coloane {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .valori-list:last-child .valoare:first-child {
+    border-top: none;
+  }
 }
 
 .strategie-grid {
@@ -71,43 +142,19 @@
 }
 
 .strategie-card {
-  position: relative;
   background: var(--color-white);
   border-radius: var(--radius-lg);
-  padding: var(--space-4) var(--space-3) var(--space-3);
+  padding: var(--space-3);
   box-shadow: var(--shadow-card);
 
   h3 {
     font-size: 1.15rem;
     margin-bottom: 0.5rem;
-    max-width: 90%;
   }
 
   p {
     margin: 0;
     color: var(--color-text-muted);
     font-size: 0.95rem;
-  }
-}
-
-.strategie-card__numar {
-  position: absolute;
-  top: var(--space-3);
-  right: var(--space-3);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--color-bg-accent);
-  color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-family: var(--font-heading);
-}
-
-@media (max-width: 860px) {
-  .despre-grid {
-    grid-template-columns: 1fr;
   }
 }

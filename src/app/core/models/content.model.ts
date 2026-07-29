@@ -51,6 +51,7 @@ export interface EroareModel {
 
 export interface ObiectivValoare {
   text: string;
+  descriere: string;
 }
 
 export interface ArticolCredinta {

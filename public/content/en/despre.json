@@ -11,17 +11,50 @@
   "obiectiveTitlu": "Values",
   "obiectiveSubtitlu": "The values that define us",
   "obiective": [
-    { "text": "Christ-centeredness" },
-    { "text": "Holiness" },
-    { "text": "Integrity" },
-    { "text": "Faithfulness to Scripture" },
-    { "text": "Discipleship" },
-    { "text": "Fellowship" },
-    { "text": "Worship" },
-    { "text": "Shared leadership" },
-    { "text": "Evangelism" },
-    { "text": "Relevance in society" },
-    { "text": "Family" }
+    {
+      "text": "Christ-centeredness",
+      "descriere": "Jesus Christ is the center of our life, worship and service; everything flows from Him and returns to Him."
+    },
+    {
+      "text": "Holiness",
+      "descriere": "We are called to live pure lives, set apart for God, in obedience to His Word."
+    },
+    {
+      "text": "Integrity",
+      "descriere": "We live with honesty and consistency between what we believe, say and do, before God and people."
+    },
+    {
+      "text": "Faithfulness to Scripture",
+      "descriere": "The Bible is our supreme authority; we want to remain faithful to its teaching in doctrine and in life."
+    },
+    {
+      "text": "Discipleship",
+      "descriere": "We grow as followers of Jesus through discipling relationships, helping one another mature in faith."
+    },
+    {
+      "text": "Fellowship",
+      "descriere": "We are a family that loves, supports and shares life together, not just a Sunday gathering."
+    },
+    {
+      "text": "Worship",
+      "descriere": "We adore God with our whole being — through praise, prayer and a life devoted to Him."
+    },
+    {
+      "text": "Shared leadership",
+      "descriere": "We serve and lead together as a team, recognizing the gifts God has given each person."
+    },
+    {
+      "text": "Evangelism",
+      "descriere": "We joyfully proclaim the Good News of Jesus to those around us, in word and deed."
+    },
+    {
+      "text": "Relevance in society",
+      "descriere": "We want to be a living, useful presence in the community, meeting people's real needs."
+    },
+    {
+      "text": "Family",
+      "descriere": "We value and support the family as God's gift and a healthy foundation for the community."
+    }
   ],
   "strategieTitlu": "Overall strategy",
   "strategieSubtitlu": "How we carry out our mission",

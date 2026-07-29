@@ -7,12 +7,12 @@
   </section>
 
   <section class="section">
-    <div class="container despre-grid">
-      <div>
+    <div class="container despre-intro">
+      <div class="despre-intro__text">
         <h2>{{ p.cineSuntemTitlu }}</h2>
         <p>{{ p.cineSuntemText }}</p>
       </div>
-      <div class="despre-grid__aside">
+      <div class="despre-carduri">
         <div class="despre-card">
           <h3>{{ p.scopTitlu }}</h3>
           <p>{{ p.scopText }}</p>
@@ -35,11 +35,31 @@
         <span class="eyebrow">{{ p.obiectiveTitlu }}</span>
         <h2>{{ p.obiectiveSubtitlu }}</h2>
       </div>
-      <ul class="valori-list">
-        @for (obiectiv of p.obiective; track obiectiv.text) {
-          <li>{{ obiectiv.text }}</li>
+      <div class="valori-coloane">
+        @for (coloana of coloane(); track $index) {
+          <ul class="valori-list">
+            @for (valoare of coloana; track valoare.item.text) {
+              <li class="valoare" [class.is-open]="valoareActiva() === valoare.index">
+                <button
+                  type="button"
+                  class="valoare__cap"
+                  (click)="comutaValoare(valoare.index)"
+                  [attr.aria-expanded]="valoareActiva() === valoare.index"
+                >
+                  <span class="valoare__nr">{{
+                    valoare.index + 1 < 10 ? '0' + (valoare.index + 1) : valoare.index + 1
+                  }}</span>
+                  <span class="valoare__nume">{{ valoare.item.text }}</span>
+                  <span class="valoare__sageata" aria-hidden="true"></span>
+                </button>
+                @if (valoareActiva() === valoare.index) {
+                  <p class="valoare__descriere">{{ valoare.item.descriere }}</p>
+                }
+              </li>
+            }
+          </ul>
         }
-      </ul>
+      </div>
     </div>
   </section>
 
@@ -50,9 +70,8 @@
         <h2>{{ p.strategieSubtitlu }}</h2>
       </div>
       <div class="strategie-grid">
-        @for (punct of p.strategie; track punct.titlu; let i = $index) {
+        @for (punct of p.strategie; track punct.titlu) {
           <article class="strategie-card">
-            <span class="strategie-card__numar">{{ i + 1 }}</span>
             <h3>{{ punct.titlu }}</h3>
             <p>{{ punct.text }}</p>
           </article>

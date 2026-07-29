@@ -102,6 +102,7 @@ collections:
             widget: list
             fields:
               - { name: text, label: 'Valoare', widget: string }
+              - { name: descriere, label: 'Descriere (apare la click)', widget: text }
           - { name: strategieTitlu, label: 'Eticheta secțiunii „Strategie”', widget: string }
           - { name: strategieSubtitlu, label: 'Subtitlu „Strategie”', widget: string }
           - name: strategie
@@ -196,6 +197,7 @@ collections:
             widget: list
             fields:
               - { name: text, label: 'Value', widget: string }
+              - { name: descriere, label: 'Description (shown on click)', widget: text }
           - { name: strategieTitlu, label: 'Strategy section label', widget: string }
           - { name: strategieSubtitlu, label: 'Strategy subtitle', widget: string }
           - name: strategie

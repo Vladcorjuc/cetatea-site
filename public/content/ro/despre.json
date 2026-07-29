@@ -11,17 +11,50 @@
   "obiectiveTitlu": "Valori",
   "obiectiveSubtitlu": "Valorile care ne definesc",
   "obiective": [
-    { "text": "Cristocentrarea" },
-    { "text": "Sfințenia" },
-    { "text": "Integritatea" },
-    { "text": "Fidelitatea Scripturală" },
-    { "text": "Ucenicia" },
-    { "text": "Părtășia" },
-    { "text": "Închinarea" },
-    { "text": "Conducerea împărtășită" },
-    { "text": "Evanghelizarea" },
-    { "text": "Relevanță în societate" },
-    { "text": "Familia" }
+    {
+      "text": "Cristocentrarea",
+      "descriere": "Isus Cristos este centrul vieții, închinării și slujirii noastre; totul pornește de la El și se întoarce la El."
+    },
+    {
+      "text": "Sfințenia",
+      "descriere": "Suntem chemați să trăim o viață curată, pusă deoparte pentru Dumnezeu, în ascultare de Cuvântul Său."
+    },
+    {
+      "text": "Integritatea",
+      "descriere": "Trăim cu onestitate și coerență între ceea ce credem, spunem și facem, înaintea lui Dumnezeu și a oamenilor."
+    },
+    {
+      "text": "Fidelitatea Scripturală",
+      "descriere": "Biblia este autoritatea noastră supremă; ne dorim să rămânem credincioși învățăturii ei în doctrină și în viață."
+    },
+    {
+      "text": "Ucenicia",
+      "descriere": "Creștem ca urmași ai lui Isus prin relații de ucenicie, ajutându-ne unii pe alții să ne maturizăm în credință."
+    },
+    {
+      "text": "Părtășia",
+      "descriere": "Suntem o familie care se iubește, se sprijină și își împărtășește viața, nu doar o adunare de duminică."
+    },
+    {
+      "text": "Închinarea",
+      "descriere": "Îl adorăm pe Dumnezeu cu toată ființa — prin laudă, rugăciune și o viață dedicată Lui."
+    },
+    {
+      "text": "Conducerea împărtășită",
+      "descriere": "Slujim și conducem împreună, ca o echipă, recunoscând darurile pe care Dumnezeu le-a dat fiecăruia."
+    },
+    {
+      "text": "Evanghelizarea",
+      "descriere": "Vestim cu bucurie Vestea Bună a lui Isus celor din jur, prin cuvânt și faptă."
+    },
+    {
+      "text": "Relevanță în societate",
+      "descriere": "Dorim să fim o prezență vie și folositoare în comunitate, răspunzând nevoilor reale ale oamenilor."
+    },
+    {
+      "text": "Familia",
+      "descriere": "Prețuim și sprijinim familia ca dar al lui Dumnezeu și temelie sănătoasă a comunității."
+    }
   ],
   "strategieTitlu": "Strategia generală",
   "strategieSubtitlu": "Cum împlinim misiunea",
