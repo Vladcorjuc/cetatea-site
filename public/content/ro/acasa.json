@@ -1,13 +1,13 @@
 {
-  "heroEyebrow": "Biserica Penticostală",
-  "heroTitluLinia1": "O cetate de",
-  "heroTitluLinia2": "credință și familie",
-  "heroSubtitlu": "Suntem o comunitate creștină din Lisaura, Suceava, care se închină lui Dumnezeu și crește împreună, ca o familie. Vino așa cum ești — te așteptăm cu drag.",
+  "heroSubtitlu": "Suntem o comunitate creștină care se întâlnește în Lisaura, Suceava, care se închină lui Dumnezeu în duh și în adevăr și care crește împreună ca o familie. Vino și tu alături de noi, așa cum ești - te așteptăm cu drag.",
+  "misiuneText": "Cetatea este o comunitate de oameni uniți în jurul Evangheliei lui Isus Cristos. Ne adunăm duminica pentru închinare și învățătură din Cuvântul lui Dumnezeu, iar în restul săptămânii ne întâlnim în grupuri mici, unde credința prinde rădăcini în viața de zi cu zi și în relațiile dintre noi.",
+  "misiuneTitlu": "Biserica nu este o clădire",
+  "heroEyebrow": "Biserica Penticostală Cetatea",
+  "evenimenteTitlu": "Ce urmează",
   "heroButonText": "Vezi programul",
   "heroButonRuta": "/contact",
-  "heroImagine": "assets/images/hero-acasa.jpg",
-  "misiuneTitlu": "Biserica nu e o clădire",
-  "misiuneText": "Cetatea este o comunitate de oameni uniți în jurul Evangheliei lui Isus Cristos. Ne adunăm duminica pentru închinare și învățătură din Cuvântul lui Dumnezeu, iar în restul săptămânii ne întâlnim în grupuri mici, unde credința prinde rădăcini în viața de zi cu zi și în relațiile dintre noi.",
+  "heroTitluLinia1": "O cetate așezată pe munte",
+  "heroTitluLinia2": "nu poate să rămână ascunsă",
   "carduri": [
     {
       "titlu": "În public",
@@ -22,5 +22,5 @@
       "linkRuta": "/comunitate"
     }
   ],
-  "evenimenteTitlu": "Ce urmează"
+  "heroImagine": "assets/images/hero-acasa.jpg"
 }
