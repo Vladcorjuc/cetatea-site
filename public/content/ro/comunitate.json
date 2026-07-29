@@ -1,24 +1,71 @@
 {
   "titlu": "Comunitate",
-  "introText": "Grupurile mici sunt locul unde credința devine cotidiană — ne rugăm unii pentru alții, studiem Scriptura împreună și ne susținem la bine și la greu. Alătură-te unui grup aproape de tine.",
+  "introText": "Grupurile mici sunt locul unde credința devine cotidiană — ne rugăm unii pentru alții, studiem Scriptura împreună și ne susținem la bine și la greu. Alege un grup mai jos pentru a vedea mai multe detalii.",
   "grupuri": [
     {
       "titlu": "Grup de tineret",
       "descriere": "Pentru liceeni și tineri — timp de închinare, discuții deschise și prietenii autentice.",
       "program": "Vineri, 19:00",
-      "imagine": "assets/images/grup-tineret.jpg"
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "Ne întâlnim săptămânal pentru a crește împreună în credință, într-o atmosferă relaxată și deschisă, unde fiecare întrebare este binevenită.",
+      "activitati": [
+        "Închinare",
+        "Studiu biblic",
+        "Jocuri și socializare",
+        "Ieșiri de grup"
+      ],
+      "poze": [
+        "assets/images/placeholder.svg",
+        "assets/images/placeholder.svg"
+      ]
     },
     {
       "titlu": "Grup de familii",
       "descriere": "Cupluri și familii care cresc împreună în credință și se sprijină reciproc.",
       "program": "Joi, 19:00",
-      "imagine": "assets/images/grup-familii.jpg"
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "Un spațiu sigur pentru cupluri și familii, unde discutăm despre viața de familie din perspectivă biblică și ne sprijinim la bine și la greu.",
+      "activitati": [
+        "Studiu biblic",
+        "Rugăciune pentru familii",
+        "Mese comune"
+      ],
+      "poze": []
     },
     {
       "titlu": "Grup de rugăciune",
       "descriere": "Un timp dedicat rugăciunii pentru biserică, comunitate și nevoile fiecăruia.",
       "program": "Miercuri, 19:00",
-      "imagine": "assets/images/grup-rugaciune.jpg"
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "Ne adunăm ca să ne rugăm împreună pentru biserică, pentru comunitatea din Lisaura și pentru nevoile personale ale fiecăruia dintre noi.",
+      "activitati": [
+        "Rugăciune de mijlocire",
+        "Închinare",
+        "Împărtășirea nevoilor"
+      ],
+      "poze": []
+    },
+    {
+      "titlu": "Grup de copii",
+      "descriere": "COMPLETEAZĂ — descriere pentru grupul de copii.",
+      "program": "COMPLETEAZĂ — ex: Duminică, în timpul slujbei",
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "COMPLETEAZĂ — detalii despre programul pentru copii (vârste, teme, echipa de slujire etc.).",
+      "activitati": [
+        "COMPLETEAZĂ"
+      ],
+      "poze": []
+    },
+    {
+      "titlu": "Mobilizare",
+      "descriere": "COMPLETEAZĂ — descriere pentru echipa de mobilizare (implicare misionară și în comunitate).",
+      "program": "COMPLETEAZĂ",
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "COMPLETEAZĂ — detalii despre acțiunile de mobilizare: implicare în comunitate, evanghelizare, ajutorare.",
+      "activitati": [
+        "COMPLETEAZĂ"
+      ],
+      "poze": []
     }
   ]
 }

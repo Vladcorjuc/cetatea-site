@@ -32,6 +32,47 @@
   max-width: 760px;
 }
 
+.hero__social {
+  position: absolute;
+  right: var(--space-3);
+  bottom: var(--space-3);
+  z-index: 1;
+  display: flex;
+  gap: 0.6rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    backdrop-filter: blur(2px);
+    transition:
+      background 0.15s ease,
+      transform 0.15s ease;
+
+    &:hover {
+      background: var(--color-terracotta);
+      transform: translateY(-2px);
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .hero__social {
+    right: var(--space-2);
+    bottom: var(--space-2);
+
+    a {
+      width: 34px;
+      height: 34px;
+    }
+  }
+}
+
 .eyebrow--inverse {
   color: var(--color-terracotta-light);
 }

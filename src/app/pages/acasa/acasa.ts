@@ -1,13 +1,13 @@
 import { Component, effect, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { CardLucrare } from '../../shared/card-lucrare/card-lucrare';
 import { Content } from '../../core/services/content';
 import { Language } from '../../core/services/language';
 import { Eveniment, PaginaAcasa, SiteSettings } from '../../core/models/content.model';
+import { ICOANE_RETELE } from '../../core/data/social-icons';
 
 @Component({
   selector: 'app-acasa',
-  imports: [CardLucrare, RouterLink],
+  imports: [CardLucrare],
   templateUrl: './acasa.html',
   styleUrl: './acasa.scss',
 })
@@ -37,10 +37,14 @@ export class Acasa {
 
   scrollToCalendar(event: Event): void {
     event.preventDefault();
-  
+
     document.getElementById('calendar')?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });
+  }
+
+  iconaPentru(nume: string): string {
+    return ICOANE_RETELE[nume] ?? '';
   }
 }

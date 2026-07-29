@@ -34,6 +34,11 @@ export const routes: Routes = [
     title: 'Contact | Biserica Cetatea',
   },
   {
+    path: 'doneaza',
+    loadComponent: () => import('./pages/doneaza/doneaza').then((m) => m.Doneaza),
+    title: 'Donează | Biserica Cetatea',
+  },
+  {
     path: '**',
     loadComponent: () => import('./pages/not-found/not-found').then((m) => m.NotFound),
     title: 'Pagina nu a fost găsită | Biserica Cetatea',

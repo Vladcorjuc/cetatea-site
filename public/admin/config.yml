@@ -33,7 +33,6 @@ collections:
         fields:
           - { name: numeBiserica, label: 'Numele scurt al bisericii', widget: string }
           - { name: denumireCompleta, label: 'Denumirea completă', widget: string }
-          - { name: motto, label: 'Motto / verset', widget: string }
           - { name: adresa, label: 'Adresă', widget: string }
           - { name: oras, label: 'Oraș', widget: string }
           - { name: email, label: 'Email', widget: string }
@@ -65,7 +64,12 @@ collections:
         fields:
           - { name: heroEyebrow, label: 'Text mic deasupra titlului', widget: string }
           - { name: heroTitluLinia1, label: 'Titlu — primul rând', widget: string }
-          - { name: heroTitluLinia2, label: 'Titlu — al doilea rând', widget: string }
+          - {
+              name: heroTitluLinia2,
+              label: 'Titlu — al doilea rând (opțional, momentan neafișat)',
+              widget: string,
+              required: false,
+            }
           - { name: heroSubtitlu, label: 'Subtitlu', widget: text }
           - { name: heroButonText, label: 'Textul butonului', widget: string }
           - { name: heroButonRuta, label: 'Ruta butonului (ex: /contact)', widget: string }
@@ -135,6 +139,25 @@ collections:
               - { name: descriere, label: 'Descriere', widget: text }
               - { name: program, label: 'Program (ex: Vineri, 19:00)', widget: string }
               - { name: imagine, label: 'Imagine', widget: image, required: false }
+              - {
+                  name: detalii,
+                  label: 'Detalii (apar la click pe grup)',
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  name: activitati,
+                  label: 'Activități (apar ca etichete)',
+                  widget: list,
+                  required: false,
+                }
+              - {
+                  name: poze,
+                  label: 'Poze (galerie, apare la click pe grup)',
+                  widget: list,
+                  field: { name: poza, label: 'Poză', widget: image },
+                  required: false,
+                }
 
       - name: contact
         label: 'Pagina Contact'
@@ -149,6 +172,34 @@ collections:
         fields:
           - { name: motto, label: 'Motto / verset (subsol)', widget: string }
 
+      - name: doneaza
+        label: 'Pagina Donează'
+        file: public/content/ro/doneaza.json
+        fields:
+          - { name: titlu, label: 'Titlul paginii', widget: string }
+          - { name: verset, label: 'Verset', widget: string }
+          - { name: versetReferinta, label: 'Referința versetului', widget: string }
+          - { name: introText, label: 'Text introductiv', widget: text }
+          - {
+              name: stripeLink,
+              label: 'Link plată cu cardul (Stripe Payment Link)',
+              widget: string,
+              required: false,
+              hint: 'Creează un Payment Link din contul tău Stripe (Dashboard → Payment Links) și lipește URL-ul aici. Dacă e gol, butonul „Donează cu cardul” nu apare.',
+            }
+          - name: conturi
+            label: 'Conturi bancare'
+            widget: list
+            fields:
+              - { name: valuta, label: 'Valută (ex: RON, EUR)', widget: string }
+              - { name: numeCont, label: 'Nume cont', widget: string }
+              - { name: banca, label: 'Bancă', widget: string }
+              - { name: iban, label: 'IBAN', widget: string }
+              - { name: swift, label: 'SWIFT/BIC', widget: string }
+          - { name: paypalLink, label: 'Link PayPal (opțional)', widget: string, required: false }
+          - { name: revolutLink, label: 'Link Revolut (opțional)', widget: string, required: false }
+          - { name: notaFinal, label: 'Notă finală', widget: text, required: false }
+
   - name: pagini_en
     label: 'Pagini (English)'
     editor:
@@ -160,7 +211,12 @@ collections:
         fields:
           - { name: heroEyebrow, label: 'Small text above title', widget: string }
           - { name: heroTitluLinia1, label: 'Title — first line', widget: string }
-          - { name: heroTitluLinia2, label: 'Title — second line', widget: string }
+          - {
+              name: heroTitluLinia2,
+              label: 'Title — second line (optional, not currently displayed)',
+              widget: string,
+              required: false,
+            }
           - { name: heroSubtitlu, label: 'Subtitle', widget: text }
           - { name: heroButonText, label: 'Button text', widget: string }
           - { name: heroButonRuta, label: 'Button route (e.g. /contact)', widget: string }
@@ -230,6 +286,25 @@ collections:
               - { name: descriere, label: 'Description', widget: text }
               - { name: program, label: 'Schedule (e.g. Friday, 19:00)', widget: string }
               - { name: imagine, label: 'Image', widget: image, required: false }
+              - {
+                  name: detalii,
+                  label: 'Details (shown when the group is clicked)',
+                  widget: text,
+                  required: false,
+                }
+              - {
+                  name: activitati,
+                  label: 'Activities (shown as tags)',
+                  widget: list,
+                  required: false,
+                }
+              - {
+                  name: poze,
+                  label: 'Photos (gallery, shown when clicked)',
+                  widget: list,
+                  field: { name: poza, label: 'Photo', widget: image },
+                  required: false,
+                }
 
       - name: contact_en
         label: 'Contact page'
@@ -243,6 +318,34 @@ collections:
         file: public/content/en/general.json
         fields:
           - { name: motto, label: 'Motto / verse (footer)', widget: string }
+
+      - name: doneaza_en
+        label: 'Donate page'
+        file: public/content/en/doneaza.json
+        fields:
+          - { name: titlu, label: 'Page title', widget: string }
+          - { name: verset, label: 'Verse', widget: string }
+          - { name: versetReferinta, label: 'Verse reference', widget: string }
+          - { name: introText, label: 'Intro text', widget: text }
+          - {
+              name: stripeLink,
+              label: 'Card payment link (Stripe Payment Link)',
+              widget: string,
+              required: false,
+              hint: 'Create a Payment Link in your Stripe account (Dashboard → Payment Links) and paste the URL here. If empty, the "Give by card" button is hidden.',
+            }
+          - name: conturi
+            label: 'Bank accounts'
+            widget: list
+            fields:
+              - { name: valuta, label: 'Currency (e.g. RON, EUR)', widget: string }
+              - { name: numeCont, label: 'Account name', widget: string }
+              - { name: banca, label: 'Bank', widget: string }
+              - { name: iban, label: 'IBAN', widget: string }
+              - { name: swift, label: 'SWIFT/BIC', widget: string }
+          - { name: paypalLink, label: 'PayPal link (optional)', widget: string, required: false }
+          - { name: revolutLink, label: 'Revolut link (optional)', widget: string, required: false }
+          - { name: notaFinal, label: 'Closing note', widget: text, required: false }
 
   - name: media
     label: 'Media'
@@ -260,7 +363,7 @@ collections:
               - { name: titlu, label: 'Titlu', widget: string }
               - { name: data, label: 'Data (AAAA-LL-ZZ)', widget: string }
               - { name: link, label: 'Link (YouTube etc.)', widget: string }
-              - { name: descriere, label: 'Descriere', widget: text }
+              - { name: descriere, label: 'Descriere', widget: text, required: false }
               - { name: thumbnail, label: 'Imagine', widget: image, required: false }
 
       - name: podcast
@@ -274,7 +377,7 @@ collections:
               - { name: titlu, label: 'Titlu', widget: string }
               - { name: data, label: 'Data (AAAA-LL-ZZ)', widget: string }
               - { name: link, label: 'Link (Spotify etc.)', widget: string }
-              - { name: descriere, label: 'Descriere', widget: text }
+              - { name: descriere, label: 'Descriere', widget: text, required: false }
               - { name: thumbnail, label: 'Imagine', widget: image, required: false }
 
       - name: evenimente

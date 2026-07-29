@@ -16,6 +16,24 @@
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  border: 2px solid transparent;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &.is-active {
+    border-color: var(--color-accent);
+  }
 }
 
 .grup-card__imagine {
@@ -42,4 +60,70 @@
   font-weight: 700;
   font-size: 0.85rem;
   color: var(--color-accent);
+}
+
+.grup-detaliu {
+  margin-top: var(--space-3);
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  animation: grup-detaliu-in 0.2s ease;
+
+  h3 {
+    margin-bottom: var(--space-2);
+  }
+}
+
+.grup-detaliu__text {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  max-width: 70ch;
+}
+
+.grup-detaliu__activitati {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: var(--space-2) 0;
+
+  li {
+    background: var(--color-white);
+    border-radius: 999px;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+}
+
+.grup-detaliu__program {
+  display: inline-block;
+  margin-top: var(--space-1);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-accent);
+}
+
+.grup-detaliu__poze {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+
+  img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+  }
+}
+
+@keyframes grup-detaliu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

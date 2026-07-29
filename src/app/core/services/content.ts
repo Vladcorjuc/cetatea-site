@@ -9,6 +9,7 @@ import {
   PaginaAcasa,
   PaginaContact,
   PaginaDespre,
+  PaginaDoneaza,
   PaginaGenerala,
   PaginaGrupuri,
   ResursaMedia,
@@ -50,6 +51,10 @@ export class Content {
 
   getPaginaContact(lang: Lang): Observable<PaginaContact> {
     return this.http.get<PaginaContact>(`content/${lang}/contact.json`);
+  }
+
+  getPaginaDoneaza(lang: Lang): Observable<PaginaDoneaza> {
+    return this.http.get<PaginaDoneaza>(`content/${lang}/doneaza.json`);
   }
 
   getPredici(): Observable<ResursaMedia[]> {

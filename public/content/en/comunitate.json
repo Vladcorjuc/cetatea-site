@@ -1,24 +1,71 @@
 {
   "titlu": "Community",
-  "introText": "Small groups are where faith becomes everyday — we pray for one another, study Scripture together and support each other in good times and hard ones. Join a group near you.",
+  "introText": "Small groups are where faith becomes everyday — we pray for one another, study Scripture together and support each other in good times and hard ones. Choose a group below to see more details.",
   "grupuri": [
     {
       "titlu": "Youth group",
       "descriere": "For teenagers and young adults — time for worship, open conversations and genuine friendships.",
       "program": "Friday, 19:00",
-      "imagine": "assets/images/grup-tineret.jpg"
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "We meet weekly to grow together in faith, in a relaxed and open atmosphere where every question is welcome.",
+      "activitati": [
+        "Worship",
+        "Bible study",
+        "Games and socializing",
+        "Group outings"
+      ],
+      "poze": [
+        "assets/images/placeholder.svg",
+        "assets/images/placeholder.svg"
+      ]
     },
     {
       "titlu": "Families group",
       "descriere": "Couples and families growing together in faith and supporting one another.",
       "program": "Thursday, 19:00",
-      "imagine": "assets/images/grup-familii.jpg"
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "A safe space for couples and families, where we talk about family life from a biblical perspective and support one another through good times and hard ones.",
+      "activitati": [
+        "Bible study",
+        "Prayer for families",
+        "Shared meals"
+      ],
+      "poze": []
     },
     {
       "titlu": "Prayer group",
       "descriere": "A time dedicated to prayer for the church, the community and everyone's needs.",
       "program": "Wednesday, 19:00",
-      "imagine": "assets/images/grup-rugaciune.jpg"
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "We gather to pray together for the church, for the Lisaura community, and for each person's personal needs.",
+      "activitati": [
+        "Intercessory prayer",
+        "Worship",
+        "Sharing needs"
+      ],
+      "poze": []
+    },
+    {
+      "titlu": "Children's group",
+      "descriere": "FILL IN — description for the children's group.",
+      "program": "FILL IN — e.g. Sunday, during the service",
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "FILL IN — details about the children's program (ages, themes, serving team, etc.).",
+      "activitati": [
+        "FILL IN"
+      ],
+      "poze": []
+    },
+    {
+      "titlu": "Mobilization",
+      "descriere": "FILL IN — description for the mobilization team (missional and community involvement).",
+      "program": "FILL IN",
+      "imagine": "assets/images/placeholder.svg",
+      "detalii": "FILL IN — details about mobilization efforts: community involvement, evangelism, outreach.",
+      "activitati": [
+        "FILL IN"
+      ],
+      "poze": []
     }
   ]
 }

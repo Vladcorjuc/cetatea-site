@@ -91,6 +91,9 @@ export interface Grup {
   descriere: string;
   program: string;
   imagine: string;
+  detalii?: string;
+  activitati?: string[];
+  poze?: string[];
 }
 
 export interface PaginaGrupuri {
@@ -103,7 +106,7 @@ export interface ResursaMedia {
   titlu: string;
   data: string;
   link: string;
-  descriere: string;
+  descriere?: string;
   thumbnail?: string;
 }
 
@@ -129,4 +132,24 @@ export interface Articol extends ArticolRezumat {
 export interface PaginaContact {
   titlu: string;
   introText: string;
+}
+
+export interface ContTransfer {
+  valuta: string;
+  numeCont: string;
+  banca: string;
+  iban: string;
+  swift: string;
+}
+
+export interface PaginaDoneaza {
+  titlu: string;
+  verset: string;
+  versetReferinta: string;
+  introText: string;
+  stripeLink?: string;
+  conturi: ContTransfer[];
+  paypalLink?: string;
+  revolutLink?: string;
+  notaFinal: string;
 }

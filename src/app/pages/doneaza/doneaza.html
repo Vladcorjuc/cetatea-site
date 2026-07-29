@@ -1,0 +1,69 @@
+@if (pagina(); as p) {
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--inverse">{{ i18n.t('doneaza.eyebrow') }}</span>
+      <h1>{{ p.titlu }}</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container doneaza-intro">
+      <p class="verset">
+        „{{ p.verset }}” <span>— {{ p.versetReferinta }}</span>
+      </p>
+      <p class="doneaza-text">{{ p.introText }}</p>
+
+      @if (p.stripeLink) {
+        <a class="btn btn-primary doneaza-stripe" [href]="p.stripeLink" target="_blank" rel="noopener">
+          {{ i18n.t('doneaza.doneazaCuCardul') }}
+        </a>
+      }
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <p class="conturi-eyebrow">{{ i18n.t('doneaza.sauPrinTransfer') }}</p>
+      <div class="conturi-grid">
+        @for (cont of p.conturi; track cont.iban) {
+          <article class="cont-card">
+            <span class="cont-card__valuta">{{ cont.valuta }}</span>
+            <dl>
+              <dt>{{ i18n.t('doneaza.numeCont') }}</dt>
+              <dd>{{ cont.numeCont }}</dd>
+              <dt>{{ i18n.t('doneaza.banca') }}</dt>
+              <dd>{{ cont.banca }}</dd>
+              <dt>IBAN</dt>
+              <dd class="cont-card__iban">
+                <span>{{ cont.iban }}</span>
+                <button type="button" (click)="copiazaIban(cont.iban)">
+                  {{ contCopiat() === cont.iban ? i18n.t('doneaza.copiat') : i18n.t('doneaza.copiaza') }}
+                </button>
+              </dd>
+              <dt>SWIFT/BIC</dt>
+              <dd>{{ cont.swift }}</dd>
+            </dl>
+          </article>
+        }
+
+        @if (p.paypalLink) {
+          <a class="cont-card cont-card--link" [href]="p.paypalLink" target="_blank" rel="noopener">
+            <span class="cont-card__valuta">PayPal</span>
+            <p>{{ i18n.t('doneaza.deschidePaypal') }} →</p>
+          </a>
+        }
+
+        @if (p.revolutLink) {
+          <a class="cont-card cont-card--link" [href]="p.revolutLink" target="_blank" rel="noopener">
+            <span class="cont-card__valuta">Revolut</span>
+            <p>{{ i18n.t('doneaza.deschideRevolut') }} →</p>
+          </a>
+        }
+      </div>
+
+      @if (p.notaFinal) {
+        <p class="doneaza-nota">{{ p.notaFinal }}</p>
+      }
+    </div>
+  </section>
+}

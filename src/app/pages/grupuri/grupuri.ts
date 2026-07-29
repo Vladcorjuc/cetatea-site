@@ -14,12 +14,20 @@ export class Grupuri {
   protected readonly i18n = inject(Language);
 
   protected readonly pagina = signal<PaginaGrupuri | null>(null);
+  protected readonly grupActiv = signal<number | null>(null);
 
   constructor() {
     effect(() => {
       this.content
         .getPaginaComunitate(this.i18n.lang())
-        .subscribe((pagina) => this.pagina.set(pagina));
+        .subscribe((pagina) => {
+          this.pagina.set(pagina);
+          this.grupActiv.set(null);
+        });
     });
+  }
+
+  selecteaza(index: number): void {
+    this.grupActiv.update((curent) => (curent === index ? null : index));
   }
 }

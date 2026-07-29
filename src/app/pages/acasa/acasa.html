@@ -24,6 +24,18 @@
         }
       </div>
     </div>
+
+    @if (site(); as s) {
+      <div class="hero__social">
+        @for (retea of s.retele; track retea.nume) {
+          <a [href]="retea.link" target="_blank" rel="noopener" [attr.aria-label]="retea.nume">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+              <path [attr.d]="iconaPentru(retea.nume)" />
+            </svg>
+          </a>
+        }
+      </div>
+    }
   </section>
 
   <section class="section">

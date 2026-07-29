@@ -11,17 +11,51 @@
       <p class="grupuri-intro">{{ p.introText }}</p>
 
       <div class="grupuri-grid">
-        @for (grup of p.grupuri; track grup.titlu) {
-          <article class="grup-card">
+        @for (grup of p.grupuri; track grup.titlu; let i = $index) {
+          <button
+            type="button"
+            class="grup-card"
+            [class.is-active]="grupActiv() === i"
+            (click)="selecteaza(i)"
+            [attr.aria-expanded]="grupActiv() === i"
+          >
             <div class="grup-card__imagine" [style.background-image]="'url(' + grup.imagine + ')'"></div>
             <div class="grup-card__body">
               <h3>{{ grup.titlu }}</h3>
               <p>{{ grup.descriere }}</p>
               <span class="grup-card__program">{{ grup.program }}</span>
             </div>
-          </article>
+          </button>
         }
       </div>
+
+      @if (grupActiv() !== null && p.grupuri[grupActiv()!]; as activ) {
+        <div class="grup-detaliu">
+          <h3>{{ activ.titlu }}</h3>
+
+          @if (activ.detalii) {
+            <p class="grup-detaliu__text">{{ activ.detalii }}</p>
+          }
+
+          @if (activ.activitati && activ.activitati.length) {
+            <ul class="grup-detaliu__activitati">
+              @for (activitate of activ.activitati; track activitate) {
+                <li>{{ activitate }}</li>
+              }
+            </ul>
+          }
+
+          <span class="grup-detaliu__program">{{ activ.program }}</span>
+
+          @if (activ.poze && activ.poze.length) {
+            <div class="grup-detaliu__poze">
+              @for (poza of activ.poze; track poza) {
+                <img [src]="poza" [alt]="activ.titlu" />
+              }
+            </div>
+          }
+        </div>
+      }
     </div>
   </section>
 }

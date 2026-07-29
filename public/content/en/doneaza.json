@@ -1,0 +1,33 @@
+{
+  "titlu": "Donate",
+  "verset": "Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver.",
+  "versetReferinta": "2 Corinthians 9:7",
+  "introText": "Thank you for wanting to support the work of Cetatea Church. Your gifts help us continue worship, discipleship and involvement in the Lisaura community. You can give by card or by bank transfer using the details below.",
+  "stripeLink": "https://buy.stripe.com/test_8x23cxfEzgCT2k74BfaAw00",
+  "conturi": [
+    {
+      "valuta": "RON",
+      "numeCont": "FILL IN — Account name",
+      "banca": "FILL IN — Bank",
+      "iban": "RO00XXXX0000000000000000",
+      "swift": "FILL IN"
+    },
+    {
+      "valuta": "EUR",
+      "numeCont": "FILL IN — Account name",
+      "banca": "FILL IN — Bank",
+      "iban": "RO00XXXX0000000000000001",
+      "swift": "FILL IN"
+    },
+    {
+      "valuta": "Revolut",
+      "numeCont": "FILL IN — Account name",
+      "banca": "Revolut Business",
+      "iban": "FILL IN — Revolut IBAN",
+      "swift": "FILL IN"
+    }
+  ],
+  "paypalLink": "",
+  "revolutLink": "",
+  "notaFinal": "For any question about giving, feel free to contact us directly."
+}
