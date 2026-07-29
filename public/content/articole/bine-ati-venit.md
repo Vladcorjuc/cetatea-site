@@ -1,8 +1,8 @@
 ---
-titlu: 'Bine ați venit pe noul site al Cetății'
-data: '2026-07-17'
-coperta: 'assets/images/articol-bun-venit.jpg'
-rezumat: 'Un prim articol de test — poate fi editat sau șters din panoul de administrare.'
+titlu: Bine ați venit pe noul site al Cetății
+data: 2026-07-17
+coperta: assets/images/articol-bun-venit.jpg
+rezumat: Un prim articol de test; poate fi editat sau șters din panoul de administrare.
 ---
 
 Acesta este un articol de exemplu, creat pentru a arăta cum vor arăta articolele pe site.
