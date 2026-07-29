@@ -9,7 +9,7 @@
       </h2>
       <p class="hero__subtitle">{{ p.heroSubtitlu }}</p>
       <div class="hero__actions">
-        <a href="#calendar" class="btn btn-primary">
+        <a href="#" (click)="scrollToCalendar($event)" class="btn btn-primary">
           {{ p.heroButonText }}
         </a>
         @if (site(); as s) {
