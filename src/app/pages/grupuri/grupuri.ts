@@ -28,6 +28,18 @@ export class Grupuri {
   }
 
   selecteaza(index: number): void {
-    this.grupActiv.update((curent) => (curent === index ? null : index));
+    const seDeschide = this.grupActiv() !== index;
+    this.grupActiv.set(seDeschide ? index : null);
+
+    if (seDeschide) {
+      // Wait for the detail panel to render, then bring it into view —
+      // on a phone it opens below all the cards, out of sight otherwise.
+      setTimeout(() => {
+        document.getElementById('grup-detaliu')?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+        });
+      }, 50);
+    }
   }
 }

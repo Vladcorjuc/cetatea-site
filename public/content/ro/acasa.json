@@ -10,10 +10,10 @@
   "heroTitluLinia2": "tbd",
   "carduri": [
     {
-      "titlu": "În public",
+      "titlu": "În adunare",
       "text": "Duminica ne adunăm împreună pentru a ne închina prin rugăciune, laudă și vestirea Evangheliei.",
-      "linkText": "Programul duminicii",
-      "linkRuta": "/contact"
+      "linkText": "Program",
+      "linkRuta": "#calendar"
     },
     {
       "titlu": "În case",

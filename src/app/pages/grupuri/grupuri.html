@@ -30,7 +30,7 @@
       </div>
 
       @if (grupActiv() !== null && p.grupuri[grupActiv()!]; as activ) {
-        <div class="grup-detaliu">
+        <div class="grup-detaliu" id="grup-detaliu">
           <h3>{{ activ.titlu }}</h3>
 
           @if (activ.detalii) {
