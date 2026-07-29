@@ -34,4 +34,13 @@ export class Acasa {
       year: 'numeric',
     });
   }
+
+  scrollToCalendar(event: Event): void {
+    event.preventDefault();
+  
+    document.getElementById('calendar')?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }
 }
