@@ -1,7 +1,7 @@
 ---
 titlu: Bine ați venit la Biserica Penticostală Cetatea Suceava!
 data: 2026-08-04
-coperta: assets/images/articol-bun-venit.jpg
+coperta: assets/uploads/bine-ati-venit_poza-coperta.jpg
 rezumat: O comunitate aflată la început de drum, care Îl urmează pe Isus Hristos
   și își dorește să vadă oameni transformați prin Evanghelie!
 ---
