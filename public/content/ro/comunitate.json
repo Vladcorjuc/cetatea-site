@@ -3,16 +3,16 @@
   "introText": "Grupurile mici sunt locul unde credința devine cotidiană — ne rugăm unii pentru alții, studiem Scriptura împreună și ne susținem la bine și la greu. Alege un grup mai jos pentru a vedea mai multe detalii.",
   "grupuri": [
     {
-      "titlu": "Grup de tineret",
-      "descriere": "Pentru liceeni și tineri — timp de închinare, discuții deschise și prietenii autentice.",
+      "titlu": "TINERET",
+      "descriere": "Pentru liceeni și tineri care cresc în credință, prietenie și slujire.",
       "program": " ",
       "imagine": "assets/images/placeholder.svg",
-      "detalii": "Ne întâlnim săptămânal pentru a crește împreună în credință, într-o atmosferă relaxată și deschisă, unde fiecare întrebare este binevenită.",
+      "detalii": "Grupul de tineret este un loc în care liceenii și tinerii pot crește în relația cu Dumnezeu, pot construi prietenii autentice și pot descoperi cum să trăiască Evanghelia în viața de zi cu zi.\n\nPrin studiu biblic, rugăciune, discuții deschise și activități comune, ne dorim să formăm tineri maturi spiritual, pregătiți să își folosească darurile și să se implice în slujirea bisericii și a comunității.",
       "activitati": [
         "Închinare",
         "Studiu biblic",
-        "Jocuri și socializare",
-        "Ieșiri de grup"
+        "Socializare",
+        "Ieșiri"
       ],
       "poze": [
         "assets/images/placeholder.svg",
@@ -20,50 +20,57 @@
       ]
     },
     {
-      "titlu": "Grup de familii",
-      "descriere": "Cupluri și familii care cresc împreună în credință și se sprijină reciproc.",
+      "titlu": "FAMILII",
+      "descriere": "Un loc în care familiile cresc împreună și se sprijină în credință.",
       "program": " ",
       "imagine": "assets/images/placeholder.svg",
-      "detalii": "Un spațiu sigur pentru cupluri și familii, unde discutăm despre viața de familie din perspectivă biblică și ne sprijinim la bine și la greu.",
+      "detalii": "Grupul de familii oferă un cadru de părtășie, încurajare și creștere spirituală pentru cupluri și familii.\n\nNe dorim să construim relații sănătoase, să aplicăm principiile Scripturii în viața de familie și să ne sprijinim reciproc în provocările de zi cu zi. Prin rugăciune, dialog și relații autentice, urmărim întărirea familiilor și apropierea lor de Dumnezeu.",
       "activitati": [
         "Studiu biblic",
-        "Rugăciune pentru familii",
-        "Mese comune"
+        "Rugăciune",
+        "Părtășie",
+        "Sprijin"
       ],
       "poze": []
     },
     {
-      "titlu": "Grup de rugăciune",
+      "titlu": "GRUP DE RUGĂCIUNE",
       "descriere": "Un timp dedicat rugăciunii pentru biserică, comunitate și nevoile fiecăruia.",
       "program": " ",
       "imagine": "assets/images/placeholder.svg",
       "detalii": "Ne adunăm ca să ne rugăm împreună pentru biserică, pentru comunitatea din Lisaura și pentru nevoile personale ale fiecăruia dintre noi.",
       "activitati": [
-        "Rugăciune de mijlocire",
+        "Mijlocire",
         "Închinare",
         "Împărtășirea nevoilor"
       ],
       "poze": []
     },
     {
-      "titlu": "Grup de copii",
-      "descriere": "COMPLETEAZĂ — descriere pentru grupul de copii.",
+      "titlu": "COPIII CETĂȚII",
+      "descriere": "Un mediu sigur în care copiii descoperă Biblia și cresc în credință.",
       "program": " ",
       "imagine": "assets/images/placeholder.svg",
-      "detalii": "COMPLETEAZĂ — detalii despre programul pentru copii (vârste, teme, echipa de slujire etc.).",
+      "detalii": "Grupul de copii este un mediu sigur, prietenos și adaptat vârstei lor, în care cei mici pot descoperi adevărurile Scripturii și pot învăța să-L cunoască pe Dumnezeu.\n\nPrin lecții biblice, jocuri și activități creative, urmărim dezvoltarea lor spirituală, formarea caracterului și integrarea lor în viața comunității bisericii.",
       "activitati": [
-        "COMPLETEAZĂ"
+        "Lecții biblice",
+        "Cântări",
+        "Jocuri",
+        "Activități creative"
       ],
       "poze": []
     },
     {
-      "titlu": "Mobilizare",
-      "descriere": "COMPLETEAZĂ — descriere pentru echipa de mobilizare (implicare misionară și în comunitate).",
+      "titlu": "MOBILIZARE",
+      "descriere": "Un loc în care îți descoperi darurile și te implici în slujirea comunității.",
       "program": " ",
       "imagine": "assets/images/placeholder.svg",
-      "detalii": "COMPLETEAZĂ — detalii despre acțiunile de mobilizare: implicare în comunitate, evanghelizare, ajutorare.",
+      "detalii": "Mobilizarea îi ajută pe credincioși să își descopere darurile spirituale și abilitățile personale și să găsească un loc potrivit în slujire.\n\nPrin încurajare, mentorare și echipare, fiecare persoană este susținută să se implice în viața bisericii și în proiectele dedicate comunității. Credem că fiecare credincios are un rol important în împlinirea misiunii bisericii.",
       "activitati": [
-        "COMPLETEAZĂ"
+        "Echipare",
+        "Implicare",
+        "Slujire",
+        "Proiecte"
       ],
       "poze": []
     }
