@@ -1,33 +1,33 @@
 {
-  "titlu": "Donează",
-  "verset": "Fiecare să dea după cum a hotărât în inima lui: nu cu părere de rău sau de silă, căci pe cine dă cu bucurie îl iubește Dumnezeu.",
-  "versetReferinta": "2 Corinteni 9:7",
-  "introText": "Îți mulțumim că vrei să susții lucrarea Bisericii Cetatea. Darurile tale ne ajută să continuăm închinarea, ucenicia și implicarea în comunitatea din Lisaura. Poți dona cu cardul sau prin transfer bancar, folosind detaliile de mai jos.",
   "stripeLink": "https://buy.stripe.com/test_8x23cxfEzgCT2k74BfaAw00",
+  "notaFinal": "Pentru orice întrebare legată de donații, ne poți contacta direct.",
+  "titlu": "Donează",
+  "paypalLink": "",
+  "versetReferinta": "2 Corinteni 9:7",
+  "revolutLink": "",
+  "introText": "Îți mulțumim că vrei să susții lucrarea Bisericii Cetatea. Darurile tale ne ajută să continuăm închinarea, ucenicia și implicarea în comunitatea din Lisaura. Poți dona cu cardul sau prin transfer bancar, folosind detaliile de mai jos.",
   "conturi": [
     {
       "valuta": "RON",
-      "numeCont": "COMPLETEAZĂ — Nume cont",
-      "banca": "COMPLETEAZĂ — Banca",
-      "iban": "RO00XXXX0000000000000000",
-      "swift": "COMPLETEAZĂ"
+      "numeCont": " ",
+      "banca": " ",
+      "iban": " ",
+      "swift": " "
     },
     {
       "valuta": "EUR",
-      "numeCont": "COMPLETEAZĂ — Nume cont",
-      "banca": "COMPLETEAZĂ — Banca",
-      "iban": "RO00XXXX0000000000000001",
-      "swift": "COMPLETEAZĂ"
+      "numeCont": " ",
+      "banca": " ",
+      "iban": " ",
+      "swift": " "
     },
     {
       "valuta": "Revolut",
-      "numeCont": "COMPLETEAZĂ — Nume cont",
-      "banca": "Revolut Business",
-      "iban": "COMPLETEAZĂ — IBAN Revolut",
-      "swift": "COMPLETEAZĂ"
+      "numeCont": " ",
+      "banca": " ",
+      "iban": " ",
+      "swift": " "
     }
   ],
-  "paypalLink": "",
-  "revolutLink": "",
-  "notaFinal": "Pentru orice întrebare legată de donații, ne poți contacta direct."
+  "verset": "Fiecare să dea după cum a hotărât în inima lui: nu cu părere de rău sau de silă, căci pe cine dă cu bucurie îl iubește Dumnezeu."
 }
