@@ -74,26 +74,35 @@ Toate se pot face din panoul de administrare sau editând fișierele din
 - **Textele „Ce credem”**: cele 7 articole de credință sunt formulări
   generale penticostale de pornire — verificați-le și adaptați-le.
 
-## 5. Domeniu propriu
+## 5. Domeniu propriu — `bisericacetatea.ro` ✅ (cod gata)
 
-Când cumperi domeniul (ex. `bisericacetatea.ro`), spune-mi numele exact și mă
-ocup eu de toate fișierele de cod de mai jos — dar pașii 1-3 sunt acțiuni de
-cont pe care trebuie să le faci tu:
+Domeniul e cumpărat (Maghost) și toate fișierele de cod sunt deja actualizate
+(`public/CNAME`, `base-href`, `seo.ts`, `robots.txt`, `sitemap.xml`,
+`config.yml`). Rămân doar acțiunile de cont, pe care numai tu le poți face:
 
-1. **La furnizorul de domeniu**, adaugă în DNS:
-   - patru înregistrări **A** pentru `@` (domeniul gol) către IP-urile
-     GitHub Pages: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
-     `185.199.111.153`
-   - o înregistrare **CNAME** pentru `www` către `NUME_UTILIZATOR.github.io`
-2. **În repo → Settings → Pages → Custom domain**, scrie domeniul și salvează;
-   bifează „Enforce HTTPS” după ce apare disponibil (poate dura câteva ore).
-3. **Fișiere de actualizat** (le fac eu, ai nevoie doar să-mi dai domeniul):
-   - `public/CNAME` — un fișier nou, conținând doar domeniul
-   - `.github/workflows/deploy.yml` — `base-href` devine `/`
-   - `src/index.html`, `src/app/core/services/seo.ts`, `public/robots.txt`,
-     `public/sitemap.xml` — toate URL-urile `vladcorjuc.github.io/cetatea-site`
-     devin domeniul nou
-   - `public/admin/config.yml` — `site_url`, `display_url`, `logo_url`
+1. **Adaugă domeniul în [Cloudflare](https://cloudflare.com)** (plan Free) —
+   îți dă două nameservere.
+2. **La Maghost** → Domains → domeniul tău → Nameservers → pune cele două
+   nameservere de la Cloudflare (înlocuiesc nameserverele Maghost).
+   Propagarea poate dura de la câteva minute până la ~24h.
+3. **În Cloudflare → DNS → Records**, adaugă:
+
+   | Tip | Nume | Valoare |
+   |---|---|---|
+   | A | `@` | `185.199.108.153` |
+   | A | `@` | `185.199.109.153` |
+   | A | `@` | `185.199.110.153` |
+   | A | `@` | `185.199.111.153` |
+   | CNAME | `www` | `vladcorjuc.github.io` |
+
+   Pentru fiecare, click pe iconița norișor (portocaliu) ca să devină gri
+   („DNS only”) — GitHub Pages are nevoie de acces direct, nu prin proxy.
+4. **În repo → Settings → Pages → Custom domain**, scrie `bisericacetatea.ro`
+   și salvează; bifează „Enforce HTTPS” după ce devine disponibil.
+5. **Email cu domeniul propriu** (opțional): Cloudflare → Email → Email
+   Routing → redirecționează `contact@bisericacetatea.ro` către
+   `biserica.cetatea.sv@gmail.com`, apoi în Gmail → Settings → „Send mail as”
+   adaugă aceeași adresă ca alias, ca să poți și răspunde de pe ea.
 
 ## 6. Ca site-ul să apară pe Google
 

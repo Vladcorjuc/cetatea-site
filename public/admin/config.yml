@@ -12,9 +12,9 @@ backend:
 # local_backend: true
 
 locale: ro
-site_url: https://vladcorjuc.github.io/cetatea-site/
-display_url: https://vladcorjuc.github.io/cetatea-site/
-logo_url: https://vladcorjuc.github.io/cetatea-site/assets/logo/badge-vertical-terracotta.svg
+site_url: https://bisericacetatea.ro/
+display_url: https://bisericacetatea.ro/
+logo_url: https://bisericacetatea.ro/assets/logo/badge-vertical-terracotta.svg
 
 media_folder: public/assets/uploads
 public_folder: assets/uploads

@@ -29,9 +29,9 @@ jobs:
 
       - run: npm ci
 
-      # base-href-ul este derivat automat din numele repo-ului, deci
-      # workflow-ul funcționează indiferent cum se va numi repo-ul.
-      - run: npm run build -- --base-href "/${GITHUB_REPOSITORY#*/}/"
+      # Site-ul are domeniu propriu (public/CNAME), servit din rădăcina
+      # domeniului — base-href-ul este "/", nu numele repo-ului.
+      - run: npm run build -- --base-href "/"
 
       # GitHub Pages nu are rewrite-uri server-side, iar site-ul folosește
       # rute reale (fără #) pentru SEO. Copiem index.html ca 404.html ca

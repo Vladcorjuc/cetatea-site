@@ -6,8 +6,7 @@ import { filter, map, mergeMap } from 'rxjs/operators';
 import { SiteSettings } from '../models/content.model';
 
 // Site origin used to build absolute canonical/Open Graph URLs.
-// TODO: update once the custom domain is live (see SETUP.md).
-const ORIGIN = 'https://vladcorjuc.github.io/cetatea-site';
+const ORIGIN = 'https://bisericacetatea.ro';
 
 // Updates <meta name="description">, the canonical link and Open Graph tags
 // on every navigation, reading each route's `data.description`. Angular's
