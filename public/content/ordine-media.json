@@ -1,3 +1,7 @@
 {
-  "ordine": ["predici", "podcast", "articole"]
+  "ordine": [
+    "podcast",
+    "articole",
+    "predici"
+  ]
 }
