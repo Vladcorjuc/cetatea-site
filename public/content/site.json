@@ -1,5 +1,9 @@
 {
   "adresa": "Lisaura, comuna Ipotești",
+  "telefoane": [
+    "+40 758 832 209",
+    "+40 740 495 403"
+  ],
   "programDuminica": [
     {
       "titlu": "Slujba de duminică",
@@ -16,8 +20,7 @@
   "motto": "-",
   "numeBiserica": "Cetatea",
   "oras": "Suceava",
-  "telefoane": ["+40 758 832 209", "+40 740 495 403"],
-  "email": "biserica.cetatea.sv@gmail.com",
+  "email": "contact@bisericacetatea.ro",
   "retele": [
     {
       "nume": "Youtube",
