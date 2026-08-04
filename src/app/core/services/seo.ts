@@ -84,7 +84,7 @@ export class Seo {
         addressLocality: site.oras,
         addressCountry: 'RO',
       },
-      telephone: site.telefon,
+      telephone: site.telefoane[0],
       email: site.email,
       sameAs: site.retele.map((r) => r.link),
     });

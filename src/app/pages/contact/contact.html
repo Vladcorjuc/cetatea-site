@@ -23,7 +23,11 @@
             </li>
             <li>
               <strong>{{ i18n.t('contact.telefon') }}</strong>
-              <a [href]="'tel:' + s.telefon">{{ s.telefon }}</a>
+              <span class="contact-list__telefoane">
+                @for (telefon of s.telefoane; track telefon) {
+                  <a [href]="'tel:' + telefon">{{ telefon }}</a>
+                }
+              </span>
             </li>
             <li>
               <strong>{{ i18n.t('contact.program') }}</strong>

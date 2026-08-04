@@ -13,7 +13,9 @@
         <ul>
           <li>{{ s.adresa }}, {{ s.oras }}</li>
           <li><a [href]="'mailto:' + s.email">{{ s.email }}</a></li>
-          <li><a [href]="'tel:' + s.telefon">{{ s.telefon }}</a></li>
+          @for (telefon of s.telefoane; track telefon) {
+            <li><a [href]="'tel:' + telefon">{{ telefon }}</a></li>
+          }
         </ul>
       </div>
 

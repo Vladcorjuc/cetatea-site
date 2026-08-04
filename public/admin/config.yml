@@ -36,7 +36,11 @@ collections:
           - { name: adresa, label: 'Adresă', widget: string }
           - { name: oras, label: 'Oraș', widget: string }
           - { name: email, label: 'Email', widget: string }
-          - { name: telefon, label: 'Telefon', widget: string }
+          - name: telefoane
+            label: 'Telefoane'
+            hint: 'Poți adăuga unul sau mai multe numere — apar toate peste tot unde e afișat telefonul.'
+            widget: list
+            field: { name: numar, label: 'Număr (ex: +40 700 000 000)', widget: string }
           - name: programDuminica
             label: 'Program întâlniri'
             hint: 'Acest program apare automat în subsol, pe Acasă, pe Contact ȘI generează singur intrările din Calendar — nu mai e nevoie să actualizezi separat evenimentele recurente.'

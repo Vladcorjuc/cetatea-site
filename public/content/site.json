@@ -16,7 +16,7 @@
   "motto": "-",
   "numeBiserica": "Cetatea",
   "oras": "Suceava",
-  "telefon": "+40 758 832 209",
+  "telefoane": ["+40 758 832 209", "+40 740 495 403"],
   "email": "biserica.cetatea.sv@gmail.com",
   "retele": [
     {

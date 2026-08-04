@@ -4,7 +4,7 @@ export interface SiteSettings {
   adresa: string;
   oras: string;
   email: string;
-  telefon: string;
+  telefoane: string[];
   programDuminica: ProgramIntalnire[];
   retele: RetelSociala[];
 }

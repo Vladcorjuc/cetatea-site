@@ -36,6 +36,12 @@
   }
 }
 
+.contact-list__telefoane {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
 .contact-harta {
   border-radius: var(--radius-lg);
   overflow: hidden;
