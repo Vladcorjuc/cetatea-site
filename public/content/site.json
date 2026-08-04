@@ -3,35 +3,31 @@
   "programDuminica": [
     {
       "titlu": "Slujba de duminică",
-      "interval": "18:00 - 20:00"
+      "interval": "-"
     },
     {
       "titlu": "Rugăciune",
-      "interval": "Miercuri, 19:00"
+      "interval": "-"
     }
   ],
   "denumireCompleta": "Biserica Penticostală Cetatea",
   "motto": "-",
   "numeBiserica": "Cetatea",
   "oras": "Suceava",
-  "telefon": "+40 700 000 000",
+  "telefon": "+40 758 832 209",
   "email": "biserica.cetatea.sv@gmail.com",
   "retele": [
+    {
+      "nume": "Youtube",
+      "link": "https://www.youtube.com/@BisericaCetateaSV"
+    },
     {
       "nume": "Facebook",
       "link": "https://facebook.com"
     },
     {
-      "nume": "Youtube",
-      "link": "https://youtube.com"
-    },
-    {
       "nume": "Instagram",
       "link": "https://instagram.com"
-    },
-    {
-      "nume": "Spotify",
-      "link": "https://open.spotify.com"
     }
   ]
 }
