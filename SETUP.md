@@ -74,11 +74,11 @@ Toate se pot face din panoul de administrare sau editând fișierele din
 - **Textele „Ce credem”**: cele 7 articole de credință sunt formulări
   generale penticostale de pornire — verificați-le și adaptați-le.
 
-## 5. Domeniu propriu — `bisericacetatea.ro` ✅ (cod gata)
+## 5. Domeniu propriu — `bisericacetatea.ro` ✅ live
 
-Domeniul e cumpărat (Maghost) și toate fișierele de cod sunt deja actualizate
-(`public/CNAME`, `base-href`, `seo.ts`, `robots.txt`, `sitemap.xml`,
-`config.yml`). Rămân doar acțiunile de cont, pe care numai tu le poți face:
+Domeniul e cumpărat (Maghost), DNS-ul e configurat prin Cloudflare, iar
+domeniul e activ în Settings → Pages, cu certificat HTTPS valid emis. Pașii
+de mai jos rămân ca referință dacă va fi vreodată nevoie de reconfigurare.
 
 1. **Adaugă domeniul în [Cloudflare](https://cloudflare.com)** (plan Free) —
    îți dă două nameservere.
