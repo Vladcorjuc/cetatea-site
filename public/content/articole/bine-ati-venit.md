@@ -26,5 +26,3 @@ Credem că Biserica este chemată să fie o prezență vie în societate, trăin
 Pe acest site vei găsi informații despre întâlnirile noastre, resurse biblice, proiectele pe care le desfășurăm și modalitățile prin care te poți implica.
 
 > **Ne rugăm ca Dumnezeu să te călăuzească și să te binecuvânteze, iar dacă drumurile noastre se vor întâlni, să putem crește împreună în cunoașterea lui Hristos și în împlinirea chemării pe care El o are pentru fiecare dintre noi.**
->
->
