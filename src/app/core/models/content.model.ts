@@ -11,10 +11,23 @@ export interface SiteSettings {
 
 export interface PaginaGenerala {
   motto: string;
+  footerContactLabel: string;
+  footerProgramLabel: string;
+  footerUrmaresteLabel: string;
 }
+
+export type ZiSaptamana =
+  | 'Duminică'
+  | 'Luni'
+  | 'Marți'
+  | 'Miercuri'
+  | 'Joi'
+  | 'Vineri'
+  | 'Sâmbătă';
 
 export interface ProgramIntalnire {
   titlu: string;
+  zi: ZiSaptamana;
   interval: string;
 }
 
@@ -115,6 +128,12 @@ export interface Eveniment {
   data: string;
   interval: string;
   locatie: string;
+}
+
+export type SectiuneMediaId = 'predici' | 'podcast' | 'articole';
+
+export interface OrdineMedia {
+  ordine: SectiuneMediaId[];
 }
 
 export interface ArticolRezumat {

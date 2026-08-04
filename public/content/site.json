@@ -3,11 +3,13 @@
   "programDuminica": [
     {
       "titlu": "Slujba de duminică",
-      "interval": " "
+      "zi": "Duminică",
+      "interval": "-"
     },
     {
       "titlu": "Rugăciune",
-      "interval": " "
+      "zi": "Miercuri",
+      "interval": "-"
     }
   ],
   "denumireCompleta": "Biserica Penticostală Cetatea",

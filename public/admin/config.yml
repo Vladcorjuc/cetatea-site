@@ -39,10 +39,16 @@ collections:
           - { name: telefon, label: 'Telefon', widget: string }
           - name: programDuminica
             label: 'Program întâlniri'
+            hint: 'Acest program apare automat în subsol, pe Acasă, pe Contact ȘI generează singur intrările din Calendar — nu mai e nevoie să actualizezi separat evenimentele recurente.'
             widget: list
             fields:
-              - { name: titlu, label: 'Titlu', widget: string }
-              - { name: interval, label: 'Interval orar', widget: string }
+              - { name: titlu, label: 'Titlu (ex: Slujba de duminică)', widget: string }
+              - name: zi
+                label: 'Ziua săptămânii'
+                widget: select
+                options:
+                  [Duminică, Luni, Marți, Miercuri, Joi, Vineri, Sâmbătă]
+              - { name: interval, label: 'Interval orar (ex: 18:00 - 20:00)', widget: string }
           - name: retele
             label: 'Rețele sociale'
             widget: list
@@ -167,10 +173,17 @@ collections:
           - { name: introText, label: 'Text introductiv', widget: text }
 
       - name: general
-        label: 'General (motto)'
+        label: 'General (motto și subsol)'
         file: public/content/ro/general.json
         fields:
           - { name: motto, label: 'Motto / verset (subsol)', widget: string }
+          - { name: footerContactLabel, label: 'Subsol — eticheta „Contact”', widget: string }
+          - { name: footerProgramLabel, label: 'Subsol — eticheta „Program”', widget: string }
+          - {
+              name: footerUrmaresteLabel,
+              label: 'Subsol — eticheta „Urmărește-ne”',
+              widget: string,
+            }
 
       - name: doneaza
         label: 'Pagina Donează'
@@ -314,10 +327,17 @@ collections:
           - { name: introText, label: 'Intro text', widget: text }
 
       - name: general_en
-        label: 'General (motto)'
+        label: 'General (motto and footer)'
         file: public/content/en/general.json
         fields:
           - { name: motto, label: 'Motto / verse (footer)', widget: string }
+          - { name: footerContactLabel, label: 'Footer — "Contact" label', widget: string }
+          - { name: footerProgramLabel, label: 'Footer — "Program" label', widget: string }
+          - {
+              name: footerUrmaresteLabel,
+              label: 'Footer — "Follow us" label',
+              widget: string,
+            }
 
       - name: doneaza_en
         label: 'Donate page'
@@ -381,17 +401,35 @@ collections:
               - { name: thumbnail, label: 'Imagine', widget: image, required: false }
 
       - name: evenimente
-        label: 'Evenimente'
+        label: 'Evenimente speciale'
         file: public/content/evenimente.json
         fields:
           - name: evenimente
             label: 'Lista de evenimente'
+            hint: 'Doar pentru evenimente unice/speciale (ex: o conferință). Slujbele și întâlnirile recurente apar automat în Calendar din Setări generale → Program — nu le adăuga și aici.'
             widget: list
+            required: false
             fields:
               - { name: titlu, label: 'Titlu', widget: string }
               - { name: data, label: 'Data (AAAA-LL-ZZ)', widget: string }
               - { name: interval, label: 'Interval orar', widget: string }
               - { name: locatie, label: 'Locație', widget: string }
+
+      - name: ordineMedia
+        label: 'Ordinea tab-urilor (Predici / Podcast / Articole)'
+        file: public/content/ordine-media.json
+        fields:
+          - name: ordine
+            label: 'Ordine (trage pentru a rearanja)'
+            widget: list
+            field:
+              name: sectiune
+              label: 'Secțiune'
+              widget: select
+              options:
+                - { label: 'Predici', value: predici }
+                - { label: 'Podcast', value: podcast }
+                - { label: 'Articole', value: articole }
 
   - name: articole
     label: 'Articole'

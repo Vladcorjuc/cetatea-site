@@ -74,8 +74,49 @@ Toate se pot face din panoul de administrare sau editând fișierele din
 - **Textele „Ce credem”**: cele 7 articole de credință sunt formulări
   generale penticostale de pornire — verificați-le și adaptați-le.
 
-## Domeniu propriu (opțional, mai târziu)
+## 5. Domeniu propriu
 
-Dacă biserica își ia un domeniu (ex. `bisericacetatea.ro`), în Settings →
-Pages se adaugă „Custom domain”, iar în workflow (`.github/workflows/deploy.yml`)
-base-href-ul devine `/` în loc de numele repo-ului.
+Când cumperi domeniul (ex. `bisericacetatea.ro`), spune-mi numele exact și mă
+ocup eu de toate fișierele de cod de mai jos — dar pașii 1-3 sunt acțiuni de
+cont pe care trebuie să le faci tu:
+
+1. **La furnizorul de domeniu**, adaugă în DNS:
+   - patru înregistrări **A** pentru `@` (domeniul gol) către IP-urile
+     GitHub Pages: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
+     `185.199.111.153`
+   - o înregistrare **CNAME** pentru `www` către `NUME_UTILIZATOR.github.io`
+2. **În repo → Settings → Pages → Custom domain**, scrie domeniul și salvează;
+   bifează „Enforce HTTPS” după ce apare disponibil (poate dura câteva ore).
+3. **Fișiere de actualizat** (le fac eu, ai nevoie doar să-mi dai domeniul):
+   - `public/CNAME` — un fișier nou, conținând doar domeniul
+   - `.github/workflows/deploy.yml` — `base-href` devine `/`
+   - `src/index.html`, `src/app/core/services/seo.ts`, `public/robots.txt`,
+     `public/sitemap.xml` — toate URL-urile `vladcorjuc.github.io/cetatea-site`
+     devin domeniul nou
+   - `public/admin/config.yml` — `site_url`, `display_url`, `logo_url`
+
+## 6. Ca site-ul să apară pe Google
+
+Publicarea site-ului nu înseamnă automat că apare în căutări — Google trebuie
+să afle că există. Pași (după ce domeniul e live):
+
+1. **[Google Search Console](https://search.google.com/search-console)** —
+   adaugă proprietatea cu domeniul tău, verifică-l (Search Console oferă o
+   metodă prin DNS TXT record — cel mai simplu, adaugi o linie în DNS-ul de
+   la pasul 5).
+2. Din Search Console → **Sitemaps**, trimite `sitemap.xml` (deja există în
+   proiect, la `https://domeniul-tau.ro/sitemap.xml`).
+3. Din **URL Inspection**, cere indexare manuală pentru pagina principală —
+   accelerează prima apariție în căutări (normal durează câteva zile-săptămâni
+   oricum).
+4. Opțional, dar recomandat: **[Bing Webmaster Tools](https://www.bing.com/webmasters)**
+   — poate importa direct din Google Search Console într-un click, și
+   alimentează și căutarea din Bing/ChatGPT/Copilot.
+5. Odată indexat, căutări precum „biserica cetatea” sau „biserica lisaura”
+   ar trebui să scoată site-ul — ajută dacă numele bisericii și „Lisaura”,
+   „Suceava” apar cât mai natural în textele de pe Acasă și Despre noi (deja
+   e cazul).
+
+Site-ul are deja pregătit tehnic: titluri și descrieri unice per pagină,
+adresa URL canonică, date structurate „Church” pentru Google (adresă, telefon,
+program), `robots.txt` și `sitemap.xml`.

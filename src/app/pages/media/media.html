@@ -8,7 +8,7 @@
 <section class="section">
   <div class="container">
     <div class="media-tabs" role="tablist" aria-label="Tipuri de resurse">
-      @for (s of sectiuni; track s.id) {
+      @for (s of sectiuni(); track s.id) {
         <button
           type="button"
           role="tab"

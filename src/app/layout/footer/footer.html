@@ -9,7 +9,7 @@
 
     @if (site(); as s) {
       <div class="footer__col">
-        <h3>{{ i18n.t('footer.contact') }}</h3>
+        <h3>{{ general()?.footerContactLabel ?? i18n.t('footer.contact') }}</h3>
         <ul>
           <li>{{ s.adresa }}, {{ s.oras }}</li>
           <li><a [href]="'mailto:' + s.email">{{ s.email }}</a></li>
@@ -18,16 +18,16 @@
       </div>
 
       <div class="footer__col">
-        <h3>{{ i18n.t('footer.program') }}</h3>
+        <h3>{{ general()?.footerProgramLabel ?? i18n.t('footer.program') }}</h3>
         <ul>
           @for (p of s.programDuminica; track p.titlu) {
-            <li>{{ p.titlu }} — {{ p.interval }}</li>
+            <li>{{ p.titlu }} — {{ p.zi }}, {{ p.interval }}</li>
           }
         </ul>
       </div>
 
       <div class="footer__col">
-        <h3>{{ i18n.t('footer.urmareste') }}</h3>
+        <h3>{{ general()?.footerUrmaresteLabel ?? i18n.t('footer.urmareste') }}</h3>
         <div class="footer__social">
           @for (retea of s.retele; track retea.nume) {
             <a [href]="retea.link" target="_blank" rel="noopener" [attr.aria-label]="retea.nume">

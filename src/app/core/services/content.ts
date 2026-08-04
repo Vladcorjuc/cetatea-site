@@ -6,6 +6,7 @@ import {
   Articol,
   ArticolRezumat,
   Eveniment,
+  OrdineMedia,
   PaginaAcasa,
   PaginaContact,
   PaginaDespre,
@@ -73,6 +74,10 @@ export class Content {
     return this.http
       .get<{ evenimente: Eveniment[] }>('content/evenimente.json')
       .pipe(map((raspuns) => raspuns.evenimente));
+  }
+
+  getOrdineMedia(): Observable<OrdineMedia> {
+    return this.http.get<OrdineMedia>('content/ordine-media.json');
   }
 
   getArticole(): Observable<ArticolRezumat[]> {

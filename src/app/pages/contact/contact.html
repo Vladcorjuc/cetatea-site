@@ -29,7 +29,7 @@
               <strong>{{ i18n.t('contact.program') }}</strong>
               <span>
                 @for (item of s.programDuminica; track item.titlu; let ultim = $last) {
-                  {{ item.titlu }}: {{ item.interval }}{{ ultim ? '' : ' · ' }}
+                  {{ item.titlu }}: {{ item.zi }}, {{ item.interval }}{{ ultim ? '' : ' · ' }}
                 }
               </span>
             </li>
