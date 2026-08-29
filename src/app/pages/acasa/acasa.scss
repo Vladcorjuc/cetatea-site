@@ -11,8 +11,41 @@
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  // Top-anchored so the sky stays fully visible — any cropping needed to
+  // fill the frame comes off the bottom of the photo instead.
+  background-position: center top;
   background-color: #2e2a24;
+  // Warms the photo toward the site's terracotta palette without
+  // overpowering its natural colour.
+  filter: sepia(0.22) saturate(1.15) hue-rotate(-6deg) brightness(1.05);
+  // Slow "Ken Burns" drift so the hero feels alive without needing a
+  // video file. The cross is baked into the photo itself (not a CSS
+  // overlay) so it stays exactly where it belongs relative to the tower
+  // at every viewport size, with no separate positioning to maintain.
+  animation: hero-drift 22s ease-in-out infinite alternate;
+  transform-origin: center top;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+@keyframes hero-drift {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.08);
+  }
+}
+
+.hero__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--color-terracotta-dark);
+  mix-blend-mode: color;
+  opacity: 0.18;
 }
 
 .hero__scrim {
@@ -20,16 +53,34 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(46, 42, 36, 0.35) 0%,
-    rgba(46, 42, 36, 0.55) 55%,
-    rgba(46, 42, 36, 0.85) 100%
+    rgba(20, 16, 14, 0.3) 0%,
+    rgba(20, 16, 14, 0.5) 45%,
+    rgba(20, 16, 14, 0.82) 100%
   );
+}
+
+@media (max-width: 640px) {
+  .hero__scrim {
+    background: linear-gradient(
+      180deg,
+      rgba(20, 16, 14, 0.25) 0%,
+      rgba(20, 16, 14, 0.38) 40%,
+      rgba(20, 16, 14, 0.5) 78%,
+      rgba(20, 16, 14, 0.68) 100%
+    );
+  }
 }
 
 .hero__content {
   position: relative;
   padding-bottom: var(--space-5);
   max-width: 760px;
+
+  h2,
+  .hero__subtitle,
+  .eyebrow--inverse {
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.55);
+  }
 }
 
 .hero__social {
