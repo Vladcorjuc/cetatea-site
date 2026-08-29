@@ -5,23 +5,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bisericacetatea.ro/despre</loc>
+    <loc>https://bisericacetatea.ro/despre/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bisericacetatea.ro/comunitate</loc>
+    <loc>https://bisericacetatea.ro/comunitate/</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://bisericacetatea.ro/media</loc>
+    <loc>https://bisericacetatea.ro/media/</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://bisericacetatea.ro/contact</loc>
+    <loc>https://bisericacetatea.ro/contact/</loc>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://bisericacetatea.ro/doneaza</loc>
+    <loc>https://bisericacetatea.ro/doneaza/</loc>
     <priority>0.5</priority>
   </url>
 </urlset>

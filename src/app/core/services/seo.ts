@@ -27,7 +27,11 @@ export class Seo {
       )
       .subscribe(({ data, ruta }) => {
         const descriere = (data['description'] as string) ?? this.descriereImplicita();
-        const url = `${ORIGIN}${this.router.url === '/' ? '/' : this.router.url}`;
+        // Trailing slash matches the real prerendered file for each route
+        // (e.g. despre/index.html) — the exact URL that returns 200 with no
+        // redirect, so canonical/og:url always point straight at it.
+        const cale = this.router.url.split(/[?#]/)[0];
+        const url = `${ORIGIN}${cale === '/' ? '/' : `${cale}/`}`;
         // Read the title from the route snapshot rather than document.title —
         // Angular's own TitleStrategy updates the latter on the same
         // NavigationEnd tick, in a subscriber order that isn't guaranteed.
