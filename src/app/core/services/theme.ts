@@ -1,4 +1,6 @@
-import { Service, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Service, inject, signal } from '@angular/core';
+import { citesteLocal, scrieLocal } from '../utils/storage.util';
 
 export type ThemeMode = 'light' | 'dark';
 
@@ -6,6 +8,8 @@ const STORAGE_KEY = 'cetatea-theme';
 
 @Service()
 export class Theme {
+  private readonly document = inject(DOCUMENT);
+
   readonly mode = signal<ThemeMode>(this.readInitial());
 
   constructor() {
@@ -14,7 +18,7 @@ export class Theme {
 
   set(mode: ThemeMode): void {
     this.mode.set(mode);
-    localStorage.setItem(STORAGE_KEY, mode);
+    scrieLocal(STORAGE_KEY, mode);
     this.apply(mode);
   }
 
@@ -23,12 +27,12 @@ export class Theme {
   }
 
   private apply(mode: ThemeMode): void {
-    document.documentElement.setAttribute('data-theme', mode);
+    this.document.documentElement.setAttribute('data-theme', mode);
   }
 
   private readInitial(): ThemeMode {
     // Light is the default; dark is opt-in via the toggle.
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = citesteLocal(STORAGE_KEY);
     return saved === 'dark' ? 'dark' : 'light';
   }
 }

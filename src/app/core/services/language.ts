@@ -1,4 +1,6 @@
-import { Service, signal } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Service, inject, signal } from '@angular/core';
+import { citesteLocal, scrieLocal } from '../utils/storage.util';
 
 export type Lang = 'ro' | 'en';
 
@@ -108,16 +110,18 @@ const STORAGE_KEY = 'cetatea-lang';
 
 @Service()
 export class Language {
+  private readonly document = inject(DOCUMENT);
+
   readonly lang = signal<Lang>(this.readInitial());
 
   constructor() {
-    document.documentElement.lang = this.lang();
+    this.document.documentElement.lang = this.lang();
   }
 
   set(lang: Lang): void {
     this.lang.set(lang);
-    localStorage.setItem(STORAGE_KEY, lang);
-    document.documentElement.lang = lang;
+    scrieLocal(STORAGE_KEY, lang);
+    this.document.documentElement.lang = lang;
   }
 
   toggle(): void {
@@ -131,7 +135,7 @@ export class Language {
 
   private readInitial(): Lang {
     // Romanian is the primary language; English is opt-in via the switcher.
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const saved = citesteLocal(STORAGE_KEY);
     return saved === 'en' ? 'en' : 'ro';
   }
 }
