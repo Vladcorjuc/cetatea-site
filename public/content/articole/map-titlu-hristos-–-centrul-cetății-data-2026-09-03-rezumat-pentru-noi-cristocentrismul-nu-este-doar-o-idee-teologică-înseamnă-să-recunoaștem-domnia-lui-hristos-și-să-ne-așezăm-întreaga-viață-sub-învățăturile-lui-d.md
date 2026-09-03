@@ -2,11 +2,9 @@
 titlu: HRISTOS – centrul Cetății
 data: 2026-09-03
 coperta: assets/uploads/cristocentrism.png
-rezumat: Pentru noi, cristocentrismul nu este doar o idee teologică. Înseamnă să
-  recunoaștem domnia lui Hristos și să ne așezăm întreaga viață sub învățăturile
-  Lui. Dacă Hristos este în centrul Cetății, El trebuie să fie în centrul vieții
-  fiecărui credincios, al închinării și al vieții Bisericii, dar și să fie
-  vizibil în relația noastră cu societatea.
+rezumat: Pentru noi, cristocentrismul înseamnă să recunoaștem domnia lui Hristos
+  și să ne așezăm viața sub învățăturile Lui. Dacă Hristos este în centrul
+  Cetății, El trebuie să fie în centrul vieții fiecărui credincios.
 ---
 Numele de creștin este legat direct de Hristos. Pentru un creștin, faptul că Hristos trebuie să fie cel mai important și cel mai înălțat este o certitudine. Diferențele apar atunci când trebuie să răspundem la întrebarea: **Ce înseamnă, concret, ca Hristos să fie în centrul vieții noastre?**
 
