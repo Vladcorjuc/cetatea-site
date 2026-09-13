@@ -95,7 +95,20 @@ export class Content {
     const frontmatter: Record<string, string> = {};
 
     if (match) {
+      // A long field (e.g. "rezumat") gets wrapped by Decap across several
+      // indented lines — plain YAML folds those into one value joined by
+      // spaces. Track the last key so those continuation lines (no
+      // "key:", indented) get appended instead of silently dropped.
+      let ultimulCheie: string | null = null;
+
       for (const line of match[1].split('\n')) {
+        if (!line.trim()) continue;
+
+        if (/^\s/.test(line) && ultimulCheie) {
+          frontmatter[ultimulCheie] += ` ${line.trim()}`;
+          continue;
+        }
+
         const separatorIndex = line.indexOf(':');
         if (separatorIndex === -1) continue;
         const key = line.slice(0, separatorIndex).trim();
@@ -104,6 +117,7 @@ export class Content {
           .trim()
           .replace(/^['"]|['"]$/g, '');
         frontmatter[key] = value;
+        ultimulCheie = key;
       }
     }
 

@@ -11,6 +11,12 @@ backend:
 # Pentru testare locală: rulează `npx decap-server` și decomentează linia de mai jos.
 # local_backend: true
 
+# Fără această secțiune, numele fișierului unui articol nou se generează din
+# TOATE câmpurile lui (titlu + dată + rezumat concatenate), rezultând un
+# nume enorm — clean_accents scapă de diacritice.
+slug:
+  clean_accents: true
+
 locale: ro
 site_url: https://bisericacetatea.ro/
 display_url: https://bisericacetatea.ro/
@@ -443,7 +449,7 @@ collections:
     folder: public/content/articole
     extension: md
     create: true
-    slug: '{{slug}}'
+    identifier_field: titlu
     fields:
       - { name: titlu, label: 'Titlu', widget: string }
       - { name: data, label: 'Data', widget: datetime, format: 'YYYY-MM-DD', time_format: false }

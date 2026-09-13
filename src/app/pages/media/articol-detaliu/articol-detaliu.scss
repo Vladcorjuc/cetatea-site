@@ -21,16 +21,21 @@
 }
 
 .articol__coperta {
+  display: block;
   width: 100%;
   max-height: 420px;
   object-fit: cover;
   border-radius: var(--radius-lg);
-  margin-top: calc(-1 * var(--space-4));
+  // Pulls the image up into the dark header for the overlap effect, but
+  // not all the way — a full -space-4 left no room for the title's own
+  // descenders (e.g. the comma under "ț"), which then read as clipped.
+  margin-top: calc(-1 * var(--space-4) + 1rem);
   box-shadow: var(--shadow-card);
 }
 
 .articol__continut {
-  max-width: 720px;
+  // Matches the full-width cover image above instead of a narrower
+  // reading column.
   padding-top: var(--space-4);
   padding-bottom: var(--space-6);
   font-size: 1.08rem;
