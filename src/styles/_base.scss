@@ -172,6 +172,10 @@ button {
   h1 {
     color: var(--color-on-dark);
     margin: 0;
+    // Diacritics like "ț"/"ș" dip below the baseline — a snug line-height
+    // was clipping them against whatever follows the hero.
+    line-height: 1.25;
+    padding-bottom: 0.15em;
   }
 }
 

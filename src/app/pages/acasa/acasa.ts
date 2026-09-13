@@ -3,7 +3,7 @@ import { CardLucrare } from '../../shared/card-lucrare/card-lucrare';
 import { Content } from '../../core/services/content';
 import { Language } from '../../core/services/language';
 import { Eveniment, PaginaAcasa, SiteSettings } from '../../core/models/content.model';
-import { ICOANE_RETELE } from '../../core/data/social-icons';
+import { FUNDAL_RETELE, ICOANE_RETELE } from '../../core/data/social-icons';
 import { genereazaOcurentePeriodice } from '../../core/utils/program.util';
 
 @Component({
@@ -66,5 +66,9 @@ export class Acasa {
 
   iconaPentru(nume: string): string {
     return ICOANE_RETELE[nume] ?? '';
+  }
+
+  fundalPentru(nume: string): string {
+    return FUNDAL_RETELE[nume] ?? 'currentColor';
   }
 }

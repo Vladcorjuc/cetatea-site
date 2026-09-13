@@ -83,30 +83,48 @@
   }
 }
 
+.eyebrow--inverse {
+  color: var(--color-terracotta-light);
+}
+
 .hero__social {
   position: absolute;
   right: var(--space-3);
   bottom: var(--space-3);
   z-index: 1;
   display: flex;
-  gap: 0.6rem;
+  gap: 0.5rem;
 
   a {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
-    backdrop-filter: blur(2px);
-    transition:
-      background 0.15s ease,
-      transform 0.15s ease;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+    transition: transform 0.15s ease;
+
+    // The brand color/gradient (set inline via fundalPentru() as the
+    // --fundal variable) lives on this pseudo-element so it can be
+    // partly transparent while the white glyph on top stays fully
+    // opaque and crisp.
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: var(--fundal);
+      opacity: 0.82;
+    }
+
+    svg {
+      position: relative;
+      z-index: 1;
+    }
 
     &:hover {
-      background: var(--color-terracotta);
       transform: translateY(-2px);
     }
   }
@@ -116,16 +134,7 @@
   .hero__social {
     right: var(--space-2);
     bottom: var(--space-2);
-
-    a {
-      width: 34px;
-      height: 34px;
-    }
   }
-}
-
-.eyebrow--inverse {
-  color: var(--color-terracotta-light);
 }
 
 .hero h1 {

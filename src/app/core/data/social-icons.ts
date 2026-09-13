@@ -11,3 +11,14 @@ export const ICOANE_RETELE: Record<string, string> = {
   Spotify:
     'M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm3.9 13c-.2.3-.5.4-.8.2-2.2-1.3-5-1.6-8.3-.9-.3.1-.6-.1-.7-.4-.1-.3.1-.6.4-.7 3.6-.8 6.7-.5 9.2 1 .3.2.4.5.2.8Zm1.1-2.5c-.2.4-.6.5-1 .3-2.5-1.5-6.3-2-9.3-1.1-.4.1-.8-.1-.9-.5-.1-.4.1-.8.5-.9 3.4-1 7.6-.5 10.5 1.2.4.2.5.6.2 1Zm.1-2.6c-3-1.8-8-2-10.9-1.1-.5.1-1-.2-1.1-.6-.1-.5.2-1 .6-1.1 3.3-1 8.9-.8 12.4 1.3.4.3.6.9.3 1.3-.3.4-.9.5-1.3.2Z',
 };
+
+// Each network's real brand background — a solid color, except Instagram's
+// signature gradient — with a white glyph on top, like the real app icons
+// (a blue Facebook badge with a white "f", a full-color Instagram badge...).
+export const FUNDAL_RETELE: Record<string, string> = {
+  Facebook: '#1877F2',
+  Instagram: 'radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%)',
+  Youtube: '#FF0000',
+  TikTok: '#000000',
+  Spotify: '#1DB954',
+};
