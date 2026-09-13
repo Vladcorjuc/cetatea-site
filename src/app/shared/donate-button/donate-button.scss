@@ -59,7 +59,23 @@
 // hover/focus (mouse) or when explicitly toggled open (touch — there's no
 // hover on a phone, so tapping the heart opens it, then tapping the label
 // navigates) — the right edge, flush with the screen, never shifts.
-.donate-fab:hover,
+//
+// The :hover rule is scoped to devices that actually have hover (a mouse) —
+// touch browsers otherwise "stick" an element in :hover after a tap and
+// never release it, which made a second tap/swipe unable to close the
+// button even though the JS state was correctly toggling back to closed.
+@media (hover: hover) and (pointer: fine) {
+  .donate-fab:hover {
+    background: var(--color-accent-hover);
+
+    .donate-fab__label {
+      max-width: 140px;
+      padding-right: 1.2rem;
+      opacity: 1;
+    }
+  }
+}
+
 .donate-fab:focus-within,
 .donate-fab--open {
   background: var(--color-accent-hover);
