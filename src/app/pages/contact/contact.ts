@@ -12,8 +12,8 @@ import { Content } from '../../core/services/content';
 import { Language } from '../../core/services/language';
 import { PaginaContact, SiteSettings } from '../../core/models/content.model';
 
-const LOCATIE: [number, number] = [47.642124, 26.299658];
-const LINK_GOOGLE_MAPS = 'https://maps.app.goo.gl/zjdwqVvvi1XmwBLU6';
+const LOCATIE: [number, number] = [47.642018, 26.2996254];
+const LINK_GOOGLE_MAPS = 'https://maps.app.goo.gl/QGVovYhYT3LZDU6G6';
 
 // Same pin shape as the brand terracotta, drawn inline so there are no
 // image assets for Leaflet to resolve through the bundler.
