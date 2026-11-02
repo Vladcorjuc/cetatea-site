@@ -61,7 +61,11 @@ export class Contact {
       if (!element || this.hartaInitializata || typeof window === 'undefined') return;
       this.hartaInitializata = true;
 
-      void import('leaflet').then((L) => {
+      void import('leaflet').then((modul) => {
+        // Leaflet is CommonJS: depending on the bundler, its API is either on
+        // the module itself or under `default` (the production build puts it
+        // under `default` and leaves e.g. `Browser` off the namespace).
+        const L = (modul as unknown as { default?: typeof modul }).default ?? modul;
         // On a phone a one-finger drag would pan the map and trap the page
         // scroll (it's 420px tall) — so there, dragging is left to the page
         // and the map is moved/zoomed by pinching with two fingers instead.
