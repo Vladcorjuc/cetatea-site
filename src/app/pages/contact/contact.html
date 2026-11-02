@@ -41,12 +41,21 @@
         }
       </div>
 
-      <div class="contact-harta">
-        <iframe
-          [title]="i18n.t('contact.harta')"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=26.275048255920414%2C47.63005748918092%2C26.3102388381958%2C47.64732064724639&layer=mapnik&marker=47.63870423946285%2C26.292643547058105"
-          loading="lazy"
-        ></iframe>
+      <div class="contact-harta-col">
+        <div
+          #harta
+          class="contact-harta"
+          role="application"
+          [attr.aria-label]="i18n.t('contact.harta')"
+        ></div>
+        <a
+          class="contact-harta__link"
+          href="https://maps.app.goo.gl/zjdwqVvvi1XmwBLU6"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ i18n.t('contact.deschideHarta') }} →
+        </a>
       </div>
     </div>
   </section>
